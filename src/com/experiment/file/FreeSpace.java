@@ -16,8 +16,8 @@ public class FreeSpace {
 
 		File file = new File(path);
 
-		if (!file.exists() && !file.isDirectory()) {
-			System.out.println("Path does not exist or !");
+		if (!file.exists()) {
+			System.out.println("Path incorrect!");
 			return;
 		}
 
