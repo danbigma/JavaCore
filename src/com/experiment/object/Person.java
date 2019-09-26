@@ -52,5 +52,10 @@ public class Person {
 	public String sayHello() {
 		return "Hello " + this.firstname; 
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + "]";
+	}
+		
 }
