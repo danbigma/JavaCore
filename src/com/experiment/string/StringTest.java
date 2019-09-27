@@ -6,7 +6,7 @@ public class StringTest {
 
 	public static void main(String[] args) {
 
-		String string = "Lorem ipsum dolor sit amet," + " consectetur adipiscing elit."
+		String text = "Lorem ipsum dolor sit amet," + " consectetur adipiscing elit."
 				+ " Mauris mattis ex sit amet nisi " + "pretium, quis luctus quam euismod."
 				+ " In nunc nisi, vehicula nec mauris eu," + " hendrerit lacinia risus. Aliquam erat volutpat."
 				+ " Curabitur sed ex dui. Fusce ac hendrerit nisl."
@@ -16,27 +16,27 @@ public class StringTest {
 				+ "purus, at posuere nulla lectus non ex. Nunc rutrum sagittis ultrices."
 				+ " Curabitur mattis turpis odio, eu fringilla quam mattis sed. Fusce eget pretium velit.";
 
-		getRandomText(string);
+		getRandomText(text);
 
 	}
 
-	private static void getRandomText(String string) {
-		int symbolsOnString = string.length();
+	private static void getRandomText(String text) {
+		int symbolsOnString = text.length();
 
 		System.out.println("Length - " + symbolsOnString);
-		System.out.println("Firt letter - " + string.charAt(0));
-		System.out.println("Last letter - " + string.charAt(symbolsOnString - 1));
+		System.out.println("Firt letter - " + text.charAt(0));
+		System.out.println("Last letter - " + text.charAt(symbolsOnString - 1));
 
 		Random random = new Random();
 
-		String[] arrayString = string.split(" ");
+		String[] words = text.split(" ");
 
-		System.out.println("Word in this string " + arrayString.length);
+		System.out.println("Word in this string " + words.length);
 		System.out.println("------------------------------------------");
 
 		for (int i = 0; i < 10; i++) {
 
-			String randomWord = arrayString[random.nextInt(arrayString.length)];
+			String randomWord = words[random.nextInt(words.length)];
 			
 			randomWord = randomWord.toLowerCase();
 			
