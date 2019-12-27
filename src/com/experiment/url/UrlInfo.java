@@ -1,6 +1,7 @@
 package com.experiment.url;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.URL;
 
 public class UrlInfo {
@@ -13,6 +14,11 @@ public class UrlInfo {
 
 			// Create a URL object by providing URL in the form of String.
 			url = new URL("http://www.hubberspot.com/search/label/EJB?Java=ejb");
+
+			InetAddress ip=InetAddress.getByName(url.getHost());
+			  
+			System.out.println("Host Name: "+ip.getHostName());  
+			System.out.println("IP Address: "+ip.getHostAddress());  
 
 			// getHost() : Returns the host name of this URL.
 			String host = url.getHost();
