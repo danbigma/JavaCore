@@ -1,12 +1,14 @@
 package com.experiment.date;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 	    LocalDateTime myDateObj = LocalDateTime.now(); 
 	    
@@ -20,18 +22,39 @@ public class DateTest {
 	    
 	    System.out.println("----------------------------------");
 	    
-	    myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+	    Date  newDate = new Date();
 	    
-	    formattedDate = myDateObj.format(myFormatObj);
-	    
-	    System.out.println("dd-MM-yyyy - " + formattedDate);
+	    System.out.println("Basic date format - " + newDate);
 	    
 	    System.out.println("----------------------------------");
 	    
-	    Date  newDate = new Date();
+	    System.out.println("dd.MM.yyyy - " + convertDateWithDots(myDateObj));
 	    
-	    System.out.println(newDate);
-
+	    System.out.println("----------------------------------");
+	    
+	    System.out.println("dd-MM-yyyy - " + convertDateWithDashed(myDateObj));
+	    
+	    System.out.println("----------------------------------");
+	    
+	    System.out.println("dd/MM/yyyy - " + convertDateWithSlash(myDateObj));
+	    
+	    Date date = new SimpleDateFormat("dd/MM/yyyy").parse(convertDateWithSlash(myDateObj));
+	    System.out.println(date);  
+	}
+	
+	private static String convertDateWithDots(LocalDateTime date) {
+	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd.MM.yyyy"); 
+	    return date.format(myFormatObj);
+	}
+	
+	private static String convertDateWithDashed(LocalDateTime date) {
+	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy"); 
+	    return date.format(myFormatObj);
+	}
+	
+	private static String convertDateWithSlash(LocalDateTime date) {
+	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
+	    return date.format(myFormatObj);
 	}
 
 }
