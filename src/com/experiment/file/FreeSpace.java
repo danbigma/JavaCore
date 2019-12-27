@@ -7,6 +7,14 @@ public class FreeSpace {
 	private static final String PATH = "/";
 
 	public static void main(String[] args) {
+		
+		String osName = System.getProperty("os.name");
+		String homeDirectory = System.getProperty("user.home");
+		String userName = System.getProperty("user.name");
+		
+		System.out.println("You use - " + osName);
+		System.out.println("Username is - " + userName);
+		System.out.println("Your home directory - " + homeDirectory);
 
 		getFreeSpaceHardDisk(PATH);
 
