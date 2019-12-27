@@ -1,5 +1,8 @@
 package com.experiment.properties;
 
+import java.util.Properties;
+import java.util.Set;
+
 public class NameOS {
 
 	private final static String osName = "os.name";
@@ -18,7 +21,17 @@ public class NameOS {
 		System.out.println();
 		System.out.println("User dir - " + userDirectory);
 
-		System.getProperties().list(System.out);
+		// System.getProperties().list(System.out);
+		
+		// Get System Defined Properties
+		Properties systemProps = System.getProperties();
+		Set<Object> keySet = systemProps.keySet();
+		
+		for(Object obj : keySet){
+			String key = (String) obj;
+			System.out.println("{"+obj+"="+systemProps.getProperty(key)+"}");
+		}
+		
 
 	}
 
