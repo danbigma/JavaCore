@@ -54,10 +54,10 @@ public class CollectionsDemo {
 
 		// Vector
 		Vector<String> v = new Vector<String>();
-		v.add("Ayush");
-		v.add("Amit");
-		v.add("Ashish");
-		v.add("Garima");
+		v.add("Danylo");
+		v.add("Helene");
+		v.add("Ivan");  
+		v.add("Alexa"); 
 		System.out.println();
 		System.out.println("Vector Elements");
 		System.out.print("\t" + v);
@@ -65,12 +65,14 @@ public class CollectionsDemo {
 //		while (itr.hasNext()) {
 //			System.out.println(itr.next());
 //		}
-
+		System.out.println();
+		System.out.println("-----------------------------------------------------");
+		
 		ArrayList<String> list = new ArrayList<String>();// Creating arraylist
 		list.add("Danylo");// Adding object in arraylist
 		list.add("Helene");
-		list.add("Ivan");  
-		list.add("Alexa"); 
+		list.add("Ivan");
+		list.add("Alexa");
 
 		System.out.println("Traversing list through List Iterator:");
 		// Here, element iterates in reverse order
@@ -79,22 +81,34 @@ public class CollectionsDemo {
 			String str = list1.previous();
 			System.out.println(str);
 		}
+		System.out.println("-----------------------------------------------------");
 		System.out.println("Traversing list through for loop:");
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i));
 		}
-
+		System.out.println("-----------------------------------------------------");
 		System.out.println("Traversing list through forEach() method:");
 		// The forEach() method is a new feature, introduced in Java 8.
 		list.forEach(a -> { // Here, we are using lambda expression
 			System.out.println(a);
 		});
-
+		
+		System.out.println("-----------------------------------------------------");
 		System.out.println("Traversing list through forEachRemaining() method:");
 		Iterator<String> itr = list.iterator();
 		itr.forEachRemaining(a -> // Here, we are using lambda expression
 		{
 			System.out.println(a);
 		});
+		
+		System.out.println("-----------------------------------------------------");
+		ArrayList<String> al = new ArrayList<String>();
+		System.out.println("Is ArrayList Empty: " + al.isEmpty());
+		al.add("Danylo");
+		al.add("Helene");
+		al.add("Ivan");  
+		al.add("Alexa"); 
+		System.out.println("After Insertion");
+		System.out.println("Is ArrayList Empty: " + al.isEmpty());
 	}
 }
