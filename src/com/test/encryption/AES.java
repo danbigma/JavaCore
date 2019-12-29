@@ -25,7 +25,7 @@ public class AES {
 		System.out.println(decryptedString);
 	}
 
-	public static void setKey(String myKey) {
+	private static void setKey(String myKey) {
 		MessageDigest sha = null;
 		try {
 			key = myKey.getBytes("UTF-8");
