@@ -1,4 +1,4 @@
-package com.test.encryption;
+package com.data.encryption;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

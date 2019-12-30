@@ -29,7 +29,7 @@ public class PropertiesExample {
 		System.out.println("Recorrer todas las propiedades:");
 		System.out.println("-------------------------------");
 
-		for (Enumeration e = prop.keys(); e.hasMoreElements();) {
+		for (Enumeration<?> e = prop.keys(); e.hasMoreElements();) {
 			// Obtenemos el objeto
 			Object obj = e.nextElement();
 			System.out.println(obj + ": " + prop.getProperty(obj.toString()));

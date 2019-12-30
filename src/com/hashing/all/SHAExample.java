@@ -1,4 +1,4 @@
-package com.hashing.sha;
+package com.hashing.all;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

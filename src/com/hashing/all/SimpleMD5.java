@@ -1,4 +1,4 @@
-package com.hashing.md5;
+package com.hashing.all;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

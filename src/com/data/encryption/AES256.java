@@ -1,4 +1,4 @@
-package com.test.encryption;
+package com.data.encryption;
 
 import java.security.spec.KeySpec;
 import java.util.Base64;
