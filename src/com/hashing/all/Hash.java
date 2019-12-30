@@ -34,7 +34,6 @@ public enum Hash {
 			while ((nread = input.read(dataBytes)) != -1) {
 				md.update(dataBytes, 0, nread);
 			}
-			;
 			byte[] mdbytes = md.digest();
 
 			StringBuffer sb = new StringBuffer();
