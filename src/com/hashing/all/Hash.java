@@ -54,8 +54,7 @@ public enum Hash {
 	public static void main(String args[]) {
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream(new File(
-					"C:\\serveis\\dades\\loc\\sgr\\entrades\\documents\\TRAMESA\\TRE048\\SOLC\\OGE_TRAIBT_1538741445301\\Prova1Signat.pdf"));
+			fis = new FileInputStream(new File("PATHtoFILE"));
 			System.out.println(Hash.MD5.checksum(new ByteArrayInputStream(IOUtils.toByteArray(fis))));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
