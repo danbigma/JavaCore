@@ -45,6 +45,7 @@ public enum Hash {
 
 		} catch (Exception e) {
 			System.out.println("Error calculado el Hash " + e.getMessage().toString());
+			e.getStackTrace();
 		}
 		return null;
 
@@ -59,9 +60,11 @@ public enum Hash {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error" + e.getMessage());
+			e.getStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error" + e.getMessage());
+			e.getStackTrace();
 		}
 
 	}
