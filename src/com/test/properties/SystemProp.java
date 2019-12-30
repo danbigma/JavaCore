@@ -3,7 +3,7 @@ package com.test.properties;
 import java.util.Properties;
 import java.util.Set;
 
-public class NameOS {
+public class SystemProp {
 
 	private final static String osName = "os.name";
 	private final static String userHome = "user.home";
