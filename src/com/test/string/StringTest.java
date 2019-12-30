@@ -34,27 +34,31 @@ public class StringTest {
 		System.out.println("Word in this string " + words.length);
 		System.out.println("------------------------------------------");
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i <= 10; i++) {
 
 			String randomWord = words[random.nextInt(words.length)];
-			
+
 			randomWord = randomWord.toLowerCase();
-			
+
 			if (randomWord.indexOf(",") > 0) {
 				randomWord = randomWord.substring(0, randomWord.indexOf(","));
 			}
-			
+
 			if (randomWord.indexOf(".") > 0) {
 				randomWord = randomWord.substring(0, randomWord.indexOf("."));
 			}
-			
-			if (i == 0 ) {
+
+			if (i == 0) {
 				String firstLetter = randomWord.substring(0, 1);
 				randomWord = firstLetter.toUpperCase() + randomWord.substring(1);
 			}
 			
+			if (i == 10) {
+				randomWord = randomWord + ".";
+			}
+
 			System.out.print(randomWord + " ");
-			
+
 		}
 	}
 
