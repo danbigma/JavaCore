@@ -1,17 +1,17 @@
-package com.test.IO;
+package com.io.file;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
-public class CopyFileCharacter {
+public class CopyFileByte {
 	public static void main(String args[]) throws IOException {
-		FileInputStream in = null;
-		FileOutputStream out = null;
+		FileReader in = null;
+		FileWriter out = null;
 
 		try {
-			in = new FileInputStream("input.txt");
-			out = new FileOutputStream("output.txt");
+			in = new FileReader("input.txt");
+			out = new FileWriter("output.txt");
 
 			int c;
 			while ((c = in.read()) != -1) {

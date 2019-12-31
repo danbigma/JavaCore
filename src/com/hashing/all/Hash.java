@@ -57,11 +57,9 @@ public enum Hash {
 			fis = new FileInputStream(new File("PATHtoFILE"));
 			System.out.println(Hash.MD5.checksum(new ByteArrayInputStream(IOUtils.toByteArray(fis))));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Error" + e.getMessage());
 			e.getStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Error" + e.getMessage());
 			e.getStackTrace();
 		}

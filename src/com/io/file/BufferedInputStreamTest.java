@@ -1,4 +1,4 @@
-package com.test.IO;
+package com.io.file;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -26,7 +26,7 @@ public class BufferedInputStreamTest {
 }
 
 /** 
- * Класс BufferedInputStream накапливает вводимые данные в специальном буфере
- * без постоянного обращения к устройству ввода. Класс BufferedInputStream
+ * Кла�?�? BufferedInputStream накапливает вводимые данные в �?пециальном буфере
+ * без по�?то�?нного обращени�? к у�?трой�?тву ввода. Кла�?�? BufferedInputStream
  * */
 

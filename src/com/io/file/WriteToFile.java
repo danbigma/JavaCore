@@ -1,4 +1,4 @@
-package com.test.file;
+package com.io.file;
 
 import java.io.FileWriter; // Import the FileWriter class
 import java.io.IOException; // Import the IOException class to handle errors
