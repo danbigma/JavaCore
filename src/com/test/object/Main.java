@@ -8,8 +8,9 @@ public class Main {
 		
 		person.setFirstname("Danylo");
 		person.setLastname("Bigma");
+		person.setAge(29);
 		
-		Person person2 = new Person("Danylo", "Bigma", 28);
+		Person person2 = new Person("Danylo", "Bigma", 29);
 		
 		System.out.println(person.toString());
 		
