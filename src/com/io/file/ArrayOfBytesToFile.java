@@ -48,18 +48,18 @@ public class ArrayOfBytesToFile {
 	// Classic, < JDK7
 	private static void writeBytesToFileClassic(byte[] bFile, String fileDest) {
 
-		FileOutputStream fileOuputStream = null;
+		FileOutputStream fos = null;
 
 		try {
-			fileOuputStream = new FileOutputStream(fileDest);
-			fileOuputStream.write(bFile);
+			fos = new FileOutputStream(fileDest);
+			fos.write(bFile);
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if (fileOuputStream != null) {
+			if (fos != null) {
 				try {
-					fileOuputStream.close();
+					fos.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
