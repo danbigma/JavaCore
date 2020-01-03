@@ -32,6 +32,7 @@ public class MainTesting {
 		personas.stream().map(persona -> persona.getEdad()).reduce(0, (suma, edad) -> suma + edad);
 		
 		int suma = 0;
+		
 		for (Persona persona : personas) {
 			int edad = persona.getEdad();
 			suma += edad;
