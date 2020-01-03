@@ -8,7 +8,7 @@ public class LoadPropFromClasspath {
 	public static void main(String[] args) {
 
 		try (InputStream input = LoadPropFromClasspath.class.getClassLoader()
-				.getResourceAsStream("config.properties")) {
+				.getResourceAsStream("/config.properties")) {
 
 			Properties prop = new Properties();
 
