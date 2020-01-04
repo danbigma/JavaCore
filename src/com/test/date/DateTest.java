@@ -28,7 +28,8 @@ public class DateTest {
 	    System.out.println("dd/MM/yyyy - " + convertDateWithSlash(myDateObj));
 	    
 	    Date date = new SimpleDateFormat("dd/MM/yyyy").parse(convertDateWithSlash(myDateObj));
-	    System.out.println(date);  
+	    System.out.println(date);
+	    System.out.println("----------------------------------");
 	}
 	
 	// convert date to date with special format with dots  
