@@ -46,7 +46,7 @@ public class AES256 {
 
 	public static String decrypt(String strToDecrypt, String secret) {
 		try {
-			byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+			byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };// 16 byte
 			IvParameterSpec ivspec = new IvParameterSpec(iv);
 
 			SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
