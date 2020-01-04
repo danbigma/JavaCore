@@ -11,8 +11,8 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
 public class AES256 {
-	private static String secretKey = "boooooooooom!!!!";
-	private static String salt = "ssshhhhhhhhhhh!!!!";
+	private static String secretKey = "secretKey";
+	private static String salt = "salt";
 
 	public static void main(String[] args) {
 		String originalString = "howtodoinjava.com";
