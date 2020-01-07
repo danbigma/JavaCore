@@ -8,7 +8,7 @@ public class ClassTesting {
 	}
 	
 	public ClassTesting(int a, int b) {
-		System.out.println("Start constructor with Parameters!");
+		System.out.println("Start constructor with two arguments!");
 		System.out.println(a+b);
 		System.out.println("------------------------");
 	}
