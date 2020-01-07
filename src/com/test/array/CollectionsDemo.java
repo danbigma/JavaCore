@@ -20,7 +20,8 @@ public class CollectionsDemo {
 		a1.add("Ivan");
 		a1.add("Alexa");
 		System.out.println("ArrayList Elements");
-		System.out.print("\t" + a1);
+		System.out.println(a1);
+		System.out.println("-----------------------------------------------------");
 
 		// LinkedList
 		List<String> l1 = new LinkedList<String>();
@@ -30,7 +31,8 @@ public class CollectionsDemo {
 		l1.add("Alexa");
 		System.out.println();
 		System.out.println("LinkedList Elements");
-		System.out.print("\t" + l1);
+		System.out.println(l1);
+		System.out.println("-----------------------------------------------------");
 
 		// HashSet
 		Set<String> s1 = new HashSet<String>();
@@ -40,7 +42,8 @@ public class CollectionsDemo {
 		s1.add("Alexa");
 		System.out.println();
 		System.out.println("Set Elements");
-		System.out.print("\t" + s1);
+		System.out.println(s1);
+		System.out.println("-----------------------------------------------------");
 
 		// HashMap
 		Map<String, String> m1 = new HashMap<String, String>();
@@ -50,7 +53,8 @@ public class CollectionsDemo {
 		m1.put("Alexa", "22");
 		System.out.println();
 		System.out.println("Map Elements");
-		System.out.print("\t" + m1);
+		System.out.println(m1);
+		System.out.println("-----------------------------------------------------");
 
 		// Vector
 		Vector<String> v = new Vector<String>();
@@ -60,7 +64,7 @@ public class CollectionsDemo {
 		v.add("Alexa"); 
 		System.out.println();
 		System.out.println("Vector Elements");
-		System.out.print("\t" + v);
+		System.out.println(v);
 //		Iterator<String> itr = v.iterator();
 //		while (itr.hasNext()) {
 //			System.out.println(itr.next());
