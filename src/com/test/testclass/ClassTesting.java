@@ -19,7 +19,7 @@ public class ClassTesting {
 	
 	// private method 
 	public int sum() {
-		return a + b;
+		return this.a + this.b;
 	}
 	
 	// public method
