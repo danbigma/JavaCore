@@ -3,13 +3,18 @@ package com.test.testclass;
 public class MainTest {
 
 	public static void main(String[] args) {
+		int argmA = 10;
+		int argmB = 5;
 		
 		ClassTesting firstclass = new ClassTesting();
 		
 		firstclass.publicMethod();
 		
-		ClassTesting secondclass = new ClassTesting(5, 5);
-		System.out.println("Result - " + secondclass.sum());
+		ClassTesting secondclass = new ClassTesting(argmA, argmB);
+		System.out.println("Sum - " + secondclass.sum());
+		System.out.println("Subtract - " + secondclass.subtract());
+		System.out.println("Multiply - " + secondclass.multiply());
+		System.out.println("Divide - " + secondclass.divide());
 
 	}
 

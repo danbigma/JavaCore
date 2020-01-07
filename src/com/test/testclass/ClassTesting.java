@@ -22,6 +22,18 @@ public class ClassTesting {
 		return this.a + this.b;
 	}
 	
+	public int subtract() {
+		return this.a - this.b;
+	}
+	
+	public int multiply() {
+		return this.a * this.b;
+	}
+	
+	public int divide() {
+		return this.a / this.b;
+	}
+	
 	// public method
 	public void publicMethod() {
 		System.out.println("Public method!");
