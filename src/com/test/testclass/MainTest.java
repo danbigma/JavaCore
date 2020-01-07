@@ -9,6 +9,7 @@ public class MainTest {
 		firstclass.publicMethod();
 		
 		ClassTesting secondclass = new ClassTesting(5, 5);
+		System.out.println("Result - " + secondclass.sum());
 
 	}
 

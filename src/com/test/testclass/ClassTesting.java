@@ -1,6 +1,9 @@
 package com.test.testclass;
 
 public class ClassTesting {
+	
+	public int a;
+	public int b;
 
 	public ClassTesting() {
 		System.out.println("Start empty constructor!");
@@ -8,14 +11,15 @@ public class ClassTesting {
 	}
 	
 	public ClassTesting(int a, int b) {
+		this.a = a;
+		this.b = b;
 		System.out.println("Start constructor with two arguments!");
-		System.out.println(a+b);
 		System.out.println("------------------------");
 	}
 	
 	// private method 
-	private int sum(int a, int b) {
-		return a+b;
+	public int sum() {
+		return a + b;
 	}
 	
 	// public method
