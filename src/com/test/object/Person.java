@@ -6,6 +6,8 @@ public class Person {
 	private String lastname;
 	private int age;
 	private boolean smoke = false;
+	
+	public String publicVariable;
 
 	// Empty constructor.
 	public Person() {

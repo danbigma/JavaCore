@@ -11,7 +11,12 @@ public class Main {
 		person.setAge(29);
 		person.setSmoke(true);
 		
+		person.publicVariable = "public variable"; // this is public field
+		
 		System.out.println(person.toString());
+		System.out.println("---------------------------------------------");
+		System.out.println(person.publicVariable);
+		System.out.println("---------------------------------------------");
 		
 		Person person2 = new Person("Danylo", "Bigma", 29, true);
 		System.out.println(person.getFullName());
