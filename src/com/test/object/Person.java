@@ -5,6 +5,7 @@ public class Person {
 	private String firstname;
 	private String lastname;
 	private int age;
+	private boolean smoke = false;
 
 	// Empty constructor.
 	public Person() {
@@ -12,10 +13,11 @@ public class Person {
 	}
 
 	// Constructor with parameters.
-	public Person(String firstname, String lastname, int age) {
+	public Person(String firstname, String lastname, int age, boolean smoke) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
+		this.smoke = smoke;
 	}
 
 	/********* Getters and Setters *********/
@@ -74,9 +76,17 @@ public class Person {
 		}
 	}
 
+	public boolean isSmoke() {
+		return smoke;
+	}
+
+	public void setSmoke(boolean smoke) {
+		this.smoke = smoke;
+	}
+	
 	@Override
 	public String toString() {
-		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + "]";
+		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke + "]";
 	}
 
 }
