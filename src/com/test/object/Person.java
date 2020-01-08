@@ -6,16 +6,20 @@ public class Person {
 	private String lastname;
 	private int age;
 	private boolean smoke = false;
+	private static int counter;
 	
 	public String publicVariable;
+	
+	private int idPerson;
 
 	// Empty constructor.
 	public Person() {
-
+		this.idPerson = ++counter;
 	}
 
 	// Constructor with parameters.
 	public Person(String firstname, String lastname, int age, boolean smoke) {
+		this.idPerson = ++counter;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
@@ -86,10 +90,21 @@ public class Person {
 		this.smoke = smoke;
 	}
 	
+	public static int getCounter() {
+		return counter;
+	}
+	
+
+	public int getIdPerson() {
+		return idPerson;
+	}
+
 	@Override
 	public String toString() {
-		System.out.println("Method toString Override");
-		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke + "]";
+		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke
+				+ ", publicVariable=" + publicVariable + ", idPerson=" + idPerson + "]";
 	}
+	
+	
 
 }

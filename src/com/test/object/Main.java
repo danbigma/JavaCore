@@ -22,6 +22,10 @@ public class Main {
 		System.out.println(person.getFullName());
 		System.out.println(person2.getFullName() + " " + person2.getAge() + " old.");
 		System.out.println(person2.toString());
+		
+		System.out.println("Counter " + Person.getCounter());
+		
+		
 	}
 
 }
