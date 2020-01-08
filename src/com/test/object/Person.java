@@ -86,6 +86,7 @@ public class Person {
 	
 	@Override
 	public String toString() {
+		System.out.println("Method toString Override");
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke + "]";
 	}
 
