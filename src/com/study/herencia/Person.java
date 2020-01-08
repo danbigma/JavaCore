@@ -6,8 +6,10 @@ public class Person {
 	private String lastname;
 	private String gender;
 	
+	
+	public Person() {}
+
 	public Person(String firstname, String lastname, String gender) {
-		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.gender = gender;
@@ -41,7 +43,6 @@ public class Person {
 	public String toString() {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", gender=" + gender + "]";
 	}
-	
 	
 	
 }
