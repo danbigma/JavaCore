@@ -1,5 +1,7 @@
 package com.study.herencia;
 
+import java.util.Date;
+
 public class MainTest {
 	
 	public static void main(String[] args) {
@@ -14,6 +16,9 @@ public class MainTest {
 		
 		employee3.setSalary(200);
 		System.out.println(employee3.toString());
+		
+		Client client = new Client("Danylo", "Bigma", "man", new Date(), "Everis");
+		System.out.println(client.toString());
 	}
 
 }
