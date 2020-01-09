@@ -44,5 +44,4 @@ public class Person {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", gender=" + gender + "]";
 	}
 	
-	
 }

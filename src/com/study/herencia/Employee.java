@@ -4,20 +4,17 @@ public class Employee extends Person {
 	
 	private int idEmployee;
 	private double salary;
+	private static int counter;
 	
 	
-	public Employee(String firstname, String lastname, String gender, int idEmployee, double salary) {
+	public Employee(String firstname, String lastname, String gender, double salary) {
 		super(firstname, lastname, gender);
-		this.idEmployee = idEmployee;
+		this.idEmployee =  ++counter;
 		this.salary = salary;
 	}
 
 	public int getIdEmployee() {
 		return idEmployee;
-	}
-	
-	public void setIdEmployee(int idEmployee) {
-		this.idEmployee = idEmployee;
 	}
 	
 	public double getSalary() {
@@ -26,6 +23,10 @@ public class Employee extends Person {
 	
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+	
+	public static int getCounter() {
+		return counter;
 	}
 
 	@Override
