@@ -19,7 +19,7 @@ public class Person {
 
 	// Constructor with parameters.
 	public Person(String firstname, String lastname, int age, boolean smoke) {
-		this.idPerson = ++counter;
+		this();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
