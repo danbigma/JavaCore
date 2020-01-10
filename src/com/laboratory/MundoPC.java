@@ -17,12 +17,20 @@ public class MundoPC {
 
 		// creacion de computadora armada
 		Computadora compuArmada = new Computadora("Computadora Armada", monitorDell, tecladoToshi, ratonToshi);
+		
+		Monitor monitorApple = new Monitor("Apple", 1000);
+		Teclado tecladoApple = new Teclado("bluetooth", "Apple");
+		Raton ratonApple = new Raton("bluetooth", "Apple");
+		
+		// creacion de computadora apple
+		Computadora compuApple = new Computadora("Computadora Apple", monitorApple, tecladoApple, ratonApple);
 
 		// Agregamos las computadoras a la orden
 		Orden orden1 = new Orden();
 		orden1.agregarComputadora(compuToshiba);
 		orden1.agregarComputadora(compuDell);
 		orden1.agregarComputadora(compuArmada);
+		orden1.agregarComputadora(compuApple);
 		// Imprimimos la orden
 		orden1.mostrarOrden();
 
