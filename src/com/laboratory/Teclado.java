@@ -1,6 +1,6 @@
 package com.laboratory;
 
-public class Teclado extends DispositivosEntrada {
+public class Teclado extends DispositivoEntrada {
 
 	private final int idTeclado;
 	private static int contadorTeclados;
