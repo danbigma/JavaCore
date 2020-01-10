@@ -2,18 +2,18 @@ package com.laboratory;
 
 public class Monitor {
 	
-	private int idMonitor;
+	private final int idMonitor;
 	private String marca;
 	private double size;
 	private static int contadorMonitores;
 	
 	
 	public Monitor() {
-		this.idMonitor = ++contadorMonitores;
+		idMonitor = ++contadorMonitores;
 	}
 	
 	public Monitor(String marca, double size) {
-		super();
+		this();
 		this.marca = marca;
 		this.size = size;
 	}

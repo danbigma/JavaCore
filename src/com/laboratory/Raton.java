@@ -2,7 +2,7 @@ package com.laboratory;
 
 public class Raton extends DispositivosEntrada {
 
-	private int idRaton;
+	private final int idRaton;
 	private static int contadorRatones;
 	
 	public Raton(String tipoEntrada, String marca) {
