@@ -19,6 +19,9 @@ public class MainTest {
 		
 		Client client = new Client("Danylo", "Bigma", "man", new Date(), "Everis");
 		System.out.println(client.toString());
+		
+		Client client2 = new Client("Danylo", "Bigma", "man", new Date(), "Apple");
+		System.out.println(client2.toString());
 	}
 
 }
