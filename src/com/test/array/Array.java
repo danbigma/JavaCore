@@ -1,5 +1,6 @@
 package com.test.array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,6 +8,22 @@ public class Array {
 
 	private final static int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	private final static List<Integer> fixesSizeList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+	private final static List<String> list = new ArrayList<String>();
+	
+	{
+		System.out.println("Execute first!");
+		
+		list.add("String 1");
+		list.add("String 2");
+		list.add("String 3");
+		list.add("String 4");
+		list.add("String 5");
+		list.add("String 6");
+		list.add("String 7");
+		list.add("String 8");
+		list.add("String 9");
+		list.add("String 10");
+	}
 	
 	public static void main(String[] args) {
 
