@@ -1,5 +1,6 @@
 package com.test.enums;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -14,7 +15,12 @@ public class Main {
 	}
 
 	private static void todayIs(Date date) {
-		int numDay = date.getDay();
+		
+		Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(today);
+		
+		int numDay = cal.get(Calendar.DAY_OF_WEEK) - 1;
 		
 		switch (numDay) {
 		case 1:

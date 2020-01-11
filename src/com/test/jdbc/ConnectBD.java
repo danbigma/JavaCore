@@ -6,20 +6,20 @@ import java.sql.SQLException;
 
 public class ConnectBD {
 
-	private static final String connector = "jdbc:";
-	private static final String dataBase = "mysql:";
-	private static final String host = "localhost:";
-	private static final String port = "3306";
-	private static final String table = "web_student_tracker";
+	private static final String CONNECTOR = "jdbc:";
+	private static final String DATA_BASE = "mysql:";
+	private static final String HOST = "localhost:";
+	private static final String PORT = "3306";
+	private static final String TABLE = "web_student_tracker";
 	private static final String USER = "root";
 	private static final String PASSWORD = "12345678";
 	// private static final String useSSL = "?useSSL=false&amp";
 
-	private static final String timeZone = "serverTimezone=UTC";
+	private static final String TIME_ZOME = "serverTimezone=UTC";
 
-	private static final String UniformResourceLocator = connector + dataBase + "//" + host + port + "/" + table + "?"
-			+ timeZone;
-	private static final String URL = UniformResourceLocator;
+	private static final String UNIFORM_RESOURCE_LOCATOR = CONNECTOR + DATA_BASE + "//" + HOST + PORT + "/" + TABLE
+			+ "?" + TIME_ZOME;
+	private static final String URL = UNIFORM_RESOURCE_LOCATOR;
 
 	public static void main(String[] args) {
 
