@@ -14,7 +14,6 @@ public class Main {
 	}
 
 	private static void todayIs(Date date) {
-		
 		int numDay = date.getDay();
 		
 		switch (numDay) {
