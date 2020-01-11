@@ -18,7 +18,7 @@ public class MundoPC {
 		// creacion de computadora armada
 		Computadora compuArmada = new Computadora("Computadora Armada", monitorDell, tecladoToshi, ratonToshi);
 		
-		Monitor monitorApple = new Monitor("Apple", 1000);
+		Monitor monitorApple = new Monitor("Apple", 27);
 		Teclado tecladoApple = new Teclado("bluetooth", "Apple");
 		Raton ratonApple = new Raton("bluetooth", "Apple");
 		

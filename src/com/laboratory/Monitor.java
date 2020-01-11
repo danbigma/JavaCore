@@ -4,7 +4,7 @@ public class Monitor {
 	
 	private final int idMonitor;
 	private String marca;
-	private double size;
+	private double inch;
 	private static int contadorMonitores;
 	
 	
@@ -15,7 +15,7 @@ public class Monitor {
 	public Monitor(String marca, double size) {
 		this();
 		this.marca = marca;
-		this.size = size;
+		this.inch = size;
 	}
 
 	public int getIdMonitor() {
@@ -31,11 +31,11 @@ public class Monitor {
 	}
 
 	public double getSize() {
-		return size;
+		return inch;
 	}
 
 	public void setSize(double size) {
-		this.size = size;
+		this.inch = size;
 	}
 
 	public static int getContadorMonitores() {
