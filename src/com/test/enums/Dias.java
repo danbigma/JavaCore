@@ -3,7 +3,7 @@ package com.test.enums;
 public enum Dias {
 	LUNES(1, "Lunes"),
 	MARTES(2, "Martes"),
-	MIERCOLE(3, "Miercoles"),
+	MIERCOLES(3, "Miercoles"),
 	JUEVES(4, "Jueves"),
 	VIERNES(5, "Viernes"),
 	SABADO(6, "Sabado"),
