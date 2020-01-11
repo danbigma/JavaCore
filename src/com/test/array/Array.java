@@ -33,7 +33,7 @@ public class Array {
 
 	}
 
-	private static void printForeach(List<Integer> fixessizelist2) {
+	private static void printForeach(List<Integer> fixessizelist) {
 		System.out.println("Method - printForeach");
 		System.out.println();
 		// foreach
