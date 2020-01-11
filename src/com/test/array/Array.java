@@ -10,7 +10,7 @@ public class Array {
 	private final static List<Integer> fixesSizeList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 	private final static List<String> list = new ArrayList<String>();
 	
-	{
+	static {
 		System.out.println("Execute first!");
 		
 		list.add("String 1");
