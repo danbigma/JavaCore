@@ -7,10 +7,9 @@ public class Person {
 	private int age;
 	private boolean smoke = false;
 	private static int counter;
-	
+	private int idPerson;
 	public String publicVariable;
 	
-	private int idPerson;
 
 	// Empty constructor.
 	public Person() {
