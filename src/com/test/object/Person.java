@@ -9,20 +9,22 @@ public class Person {
 	private static int counter;
 	private int idPerson;
 	public String publicVariable;
+	private Contacts contacts;
 	
 
-	// Empty constructor.
+	// Empty constructor with static variable
 	public Person() {
 		this.idPerson = ++counter;
 	}
 
 	// Constructor with parameters.
-	public Person(String firstname, String lastname, int age, boolean smoke) {
+	public Person(String firstname, String lastname, int age, boolean smoke, Contacts contacts) {
 		this();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
 		this.smoke = smoke;
+		this.setContacts(contacts);
 	}
 
 	/********* Getters and Setters *********/
@@ -63,19 +65,19 @@ public class Person {
 		return "Hello " + this.firstname;
 	}
 
-	private void validationFirstname(String firstname) {
+	private static void validationFirstname(String firstname) {
 		if (firstname == null || "".equals(firstname)) {
 			throw new IllegalArgumentException("Firstname is invalid");
 		}
 	}
 
-	private void validationLastname(String lastname) {
+	private static void validationLastname(String lastname) {
 		if (lastname == null || "".equals(lastname)) {
 			throw new IllegalArgumentException("Lastname is invalid");
 		}
 	}
 
-	private void validationAge(int age) {
+	private static void validationAge(int age) {
 		if (age < 1 || age > 100) {
 			throw new IllegalArgumentException("Age is invalid");
 		}
@@ -98,10 +100,18 @@ public class Person {
 		return idPerson;
 	}
 
+	public Contacts getContacts() {
+		return contacts;
+	}
+
+	public void setContacts(Contacts contacts) {
+		this.contacts = contacts;
+	}
+
 	@Override
 	public String toString() {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke
-				+ ", publicVariable=" + publicVariable + ", idPerson=" + idPerson + "]";
+				+ ", publicVariable=" + publicVariable + ", idPerson=" + idPerson + ", contacts" + contacts.toString() + "]";
 	}
 	
 

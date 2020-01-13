@@ -10,6 +10,7 @@ public class Main {
 		person.setLastname("Bigma");
 		person.setAge(29);
 		person.setSmoke(true);
+		person.setContacts(new Contacts(633631113, "Pintor Perez Gil 13 bw 28", "Alicante", "Spain"));
 		
 		person.publicVariable = "public variable"; // this is public field
 		
@@ -18,7 +19,7 @@ public class Main {
 		System.out.println(person.publicVariable);
 		System.out.println("---------------------------------------------");
 		
-		Person person2 = new Person("Danylo", "Bigma", 29, true);
+		Person person2 = new Person("Danylo", "Bigma", 29, true, new Contacts(633631113, "Pintor Perez Gil 13 bw 28", "Alicante", "Spain"));
 		System.out.println(person.getFullName());
 		System.out.println(person2.getFullName() + " " + person2.getAge() + " old.");
 		System.out.println(person2.toString());
