@@ -12,8 +12,8 @@ public enum Dias {
 	private final int numDiaDeLaSemana;
 	private final String diaDeLaSemana;
 
-	Dias(int i, String name) {
-		this.numDiaDeLaSemana = i;
+	Dias(int num, String name) {
+		this.numDiaDeLaSemana = num;
 		this.diaDeLaSemana = name;
 	}
 
