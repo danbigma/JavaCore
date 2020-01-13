@@ -28,7 +28,6 @@ public class Person {
 	}
 
 	/********* Getters and Setters *********/
-
 	public String getFirstname() {
 		return firstname;
 	}
