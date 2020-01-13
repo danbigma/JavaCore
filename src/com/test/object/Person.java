@@ -112,6 +112,6 @@ public class Person {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke
 				+ ", publicVariable=" + publicVariable + ", idPerson=" + idPerson + ", contacts" + contacts.toString() + "]";
 	}
-	
+
 
 }
