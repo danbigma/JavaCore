@@ -24,7 +24,7 @@ public class Person {
 		this.lastname = lastname;
 		this.age = age;
 		this.smoke = smoke;
-		this.setContacts(contacts);
+		this.contacts = contacts;
 	}
 
 	/********* Getters and Setters *********/
