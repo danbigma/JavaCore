@@ -54,7 +54,6 @@ public class Person {
 		validationAge(age);
 		this.age = age;
 	}
-
 	// Method return full name of person
 	public String getFullName() {
 		return this.firstname + " " + this.lastname;
@@ -93,7 +92,6 @@ public class Person {
 	public static int getCounter() {
 		return counter;
 	}
-	
 
 	public int getIdPerson() {
 		return idPerson;
