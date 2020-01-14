@@ -9,7 +9,7 @@ public class Contacts {
 	
 	
 	public Contacts(int phoneNumber, String address, String city, String country) {
-		super();
+		super();// extends of Object, first object in java and very important
 		this.phoneNumber = phoneNumber;
 		this.address = address;
 		this.city = city;

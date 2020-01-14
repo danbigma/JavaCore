@@ -107,7 +107,7 @@ public class Person {
 		this.contacts = contacts;
 	}
 
-	@Override
+	@Override // override method of class Object
 	public String toString() {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", age=" + age + ", smoke=" + smoke
 				+ ", publicVariable=" + publicVariable + ", idPerson=" + idPerson + ", contacts" + contacts.toString() + "]";
