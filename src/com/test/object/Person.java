@@ -6,10 +6,10 @@ public class Person {
 	private String lastname;
 	private int age;
 	private boolean smoke = false;
-	private static int counter;
 	private int idPerson;
-	public String publicVariable;
 	private Contacts contacts;
+	public String publicVariable;
+	private static int counter; // static field
 	
 
 	// Empty constructor with static variable
@@ -19,7 +19,7 @@ public class Person {
 
 	// Constructor with parameters
 	public Person(String firstname, String lastname, int age, boolean smoke, Contacts contacts) {
-		this();
+		this(); // this constructor Person()
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.age = age;
