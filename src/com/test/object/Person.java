@@ -17,7 +17,7 @@ public class Person {
 		this.idPerson = ++counter;
 	}
 
-	// Constructor with parameters.
+	// Constructor with parameters
 	public Person(String firstname, String lastname, int age, boolean smoke, Contacts contacts) {
 		this();
 		this.firstname = firstname;
@@ -27,7 +27,7 @@ public class Person {
 		this.contacts = contacts;
 	}
 
-	/********* Getters and Setters *********/
+	// Getters and Setters 
 	public String getFirstname() {
 		return firstname;
 	}
@@ -55,7 +55,7 @@ public class Person {
 		this.age = age;
 	}
 
-	// Method return full name of person.
+	// Method return full name of person
 	public String getFullName() {
 		return this.firstname + " " + this.lastname;
 	}
@@ -63,19 +63,19 @@ public class Person {
 	public String sayHello() {
 		return "Hello " + this.firstname;
 	}
-
+	// method validation firstname
 	private static void validationFirstname(String firstname) {
 		if (firstname == null || "".equals(firstname)) {
 			throw new IllegalArgumentException("Firstname is invalid");
 		}
 	}
-
+	// method validation lastname
 	private static void validationLastname(String lastname) {
 		if (lastname == null || "".equals(lastname)) {
 			throw new IllegalArgumentException("Lastname is invalid");
 		}
 	}
-
+	// method validation age
 	private static void validationAge(int age) {
 		if (age < 1 || age > 100) {
 			throw new IllegalArgumentException("Age is invalid");
