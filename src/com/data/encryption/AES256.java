@@ -15,7 +15,7 @@ public class AES256 {
 	private static String salt = "salt";
 
 	public static void main(String[] args) {
-		String originalString = "howtodoinjava.com";
+		String originalString = "original string";
 
 		String encryptedString = AES.encrypt(originalString, secretKey);
 		String decryptedString = AES.decrypt(encryptedString, secretKey);
