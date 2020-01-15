@@ -23,7 +23,6 @@ public class Main {
 		System.out.println(person.publicVariable);
 		System.out.println("---------------------------------------------");
 		
-		
 		// create a new instance of object Person
 		Person person2 = new Person("Danylo", "Bigma", 29, true, contacts);
 		System.out.println(person.getFullName());

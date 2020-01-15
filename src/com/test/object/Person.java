@@ -11,7 +11,6 @@ public class Person {
 	public String publicVariable;
 	private static int counter; // static field
 	
-
 	// Empty constructor with static variable
 	public Person() {
 		this.idPerson = ++counter;
