@@ -7,15 +7,15 @@ public class DynamicString {
 		System.out.println("String-Normal-------------");
 		constructDynamicStringNormal();
 		System.out.println("--------------------------");
-		
+		// ---------------------------------------------
 		System.out.println("String-Buffer-------------");		
 		constructDynamicStringBuffer();
 		System.out.println("--------------------------");
-		
+		// ---------------------------------------------
 		System.out.println("String-Builder------------");
 		constructDynamicStringBuilder();
 		System.out.println("--------------------------");
-
+		// ---------------------------------------------
 	}
 
 	public static void constructDynamicStringNormal() {
