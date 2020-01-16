@@ -41,7 +41,7 @@ public class MySqlJdbcTest {
 
 	public static void main(String[] args)
 			throws ClassNotFoundException, FileNotFoundException, SQLException, IOException {
-		OracleJdbcTest test = new OracleJdbcTest();
+		MySqlJdbcTest test = new MySqlJdbcTest();
 		test.init(new FileInputStream(new File("properties/config.properties")));
 		test.fetch();
 	}
