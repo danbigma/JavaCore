@@ -11,18 +11,13 @@ public class FileDemo {
 			for (String s : strs) {
 				// create new file
 				f = new File(s);
-				
 				f.createNewFile();
-
 				// true if the file is executable
 				boolean bool = f.canExecute();
-
 				// find the absolute path
 				String a = f.getAbsolutePath();
-
 				// prints absolute path
 				System.out.print(a);
-
 				// prints
 				System.out.println(" is executable: " + bool);
 			}
