@@ -18,6 +18,7 @@ public class DynamicString {
 		// ---------------------------------------------
 	}
 
+	@SuppressWarnings("unused")
 	public static void constructDynamicStringNormal() {
 		long startTime = System.currentTimeMillis();
 		String s = "test";
