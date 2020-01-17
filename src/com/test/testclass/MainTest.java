@@ -15,7 +15,6 @@ public class MainTest {
 		System.out.println("Subtract - " + secondclass.subtract());
 		System.out.println("Multiply - " + secondclass.multiply());
 		System.out.println("Divide - " + secondclass.divide());
-
 	}
 
 }
