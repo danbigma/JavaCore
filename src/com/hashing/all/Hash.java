@@ -63,6 +63,6 @@ public enum Hash {
 			System.out.println("Error" + e.getMessage());
 			e.getStackTrace();
 		}
-
 	}
+	
 }
