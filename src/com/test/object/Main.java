@@ -16,7 +16,7 @@ public class Main {
 		person.setSmoke(true);
 		person.setContacts(contacts);
 		
-		person.publicVariable = "public variable"; // this is public field
+		person.publicVariable = "public variable";// this is public field
 		
 		System.out.println(person.toString());
 		System.out.println("---------------------------------------------");
