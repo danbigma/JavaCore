@@ -47,7 +47,6 @@ public class ConnectBD {
 	}
 
 	private static void closeConnection(Connection connection) {
-
 		try {
 			if (connection != null) {
 				connection.close();
@@ -57,7 +56,6 @@ public class ConnectBD {
 			System.out.println("Faile to closed the connection");
 			System.out.println("Message: " + e.getMessage().toString());
 		}
-
 	}
 
 }
