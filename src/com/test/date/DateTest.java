@@ -31,19 +31,16 @@ public class DateTest {
 	    System.out.println(date);
 	    System.out.println("----------------------------------");
 	}
-	
 	// convert date to date with special format with dots  
 	private static String convertDateWithDots(LocalDateTime date) {
 	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd.MM.yyyy"); 
 	    return date.format(myFormatObj);
 	}
-	
 	// convert date to date with special format with dashed 
 	private static String convertDateWithDashed(LocalDateTime date) {
 	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy"); 
 	    return date.format(myFormatObj);
 	}
-	
 	// convert date to date with special format with slash
 	private static String convertDateWithSlash(LocalDateTime date) {
 	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
