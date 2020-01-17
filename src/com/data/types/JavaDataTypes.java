@@ -25,11 +25,11 @@ public class JavaDataTypes {
 		String myText = "Hello";     // String 
 		
 		
-		System.out.println("int - " + myNum);
-		System.out.println("float - " + myFloatNum);
-		System.out.println("char - " + myLetter);
+		System.out.println("int - " 	+ myNum);
+		System.out.println("float - " 	+ myFloatNum);
+		System.out.println("char - " 	+ myLetter);
 		System.out.println("boolean - " + myBool);
-		System.out.println("String - " + myText);
+		System.out.println("String - " 	+ myText);
 
 	}
 
