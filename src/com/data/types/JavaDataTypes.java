@@ -24,7 +24,6 @@ public class JavaDataTypes {
 		boolean myBool = true;       // Boolean
 		String myText = "Hello";     // String 
 		
-		
 		System.out.println("int - " 	+ myNum);
 		System.out.println("float - " 	+ myFloatNum);
 		System.out.println("char - " 	+ myLetter);
