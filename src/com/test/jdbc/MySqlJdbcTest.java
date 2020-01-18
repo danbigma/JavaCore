@@ -12,9 +12,9 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MySqlJdbcTest {
-	private final static String driverClass = "com.mysql.jdbc.Driver";
+	private final static String DRIVER_CLASS = "com.mysql.jdbc.Driver";
 
-	Connection con;
+	private Connection con;
 
 	public void init(FileInputStream fs)
 			throws ClassNotFoundException, SQLException, FileNotFoundException, IOException {
@@ -23,7 +23,7 @@ public class MySqlJdbcTest {
 		String url = props.getProperty("db.url");
 		String userName = props.getProperty("db.user");
 		String password = props.getProperty("db.password");
-		Class.forName(driverClass);
+		Class.forName(DRIVER_CLASS);
 
 		con = DriverManager.getConnection(url, userName, password);
 	}
