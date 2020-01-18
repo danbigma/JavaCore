@@ -3,7 +3,7 @@ package com.test.testclass;
 public class MainTest {
 
 	public static void main(String[] args) {
-		int argmA = 10;
+		int argmA = 22;
 		int argmB = 5;
 		
 		ClassTesting firstclass = new ClassTesting();
