@@ -9,7 +9,7 @@ public class Main {
 
 		//System.out.println(Dias.MARTES);
 		
-		//printDays();
+		printDays();
 		
 		todayIs(new Date());
 	}
@@ -48,8 +48,6 @@ public class Main {
 			System.out.println("Day is not defind");
 			break;
 		}
-		
-		printDays();
 		
 	}
 
