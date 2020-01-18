@@ -7,21 +7,21 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		//System.out.println(Dias.MARTES);
-		
+		// System.out.println(Dias.MARTES);
+
 		printDays();
-		
+
 		todayIs(new Date());
 	}
 
 	private static void todayIs(Date date) {
-		
+
 		Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(today);
-		
+
 		int numDay = cal.get(Calendar.DAY_OF_WEEK) - 1;
-		
+
 		switch (numDay) {
 		case 1:
 			System.out.println("Hoy es " + Dias.LUNES.getDiaDeLaSemana());
@@ -48,7 +48,6 @@ public class Main {
 			System.out.println("Day is not defind");
 			break;
 		}
-		
 	}
 
 	private static void printDays() {
