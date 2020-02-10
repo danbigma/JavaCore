@@ -25,12 +25,14 @@ public class MainTesting {
 		personas.stream().filter(p -> Genero.MUJER == p.getGenero()).min(Comparator.comparing(Persona::getEdad))
 				.ifPresent(System.out::println);
 
+		@SuppressWarnings("unused")
 		boolean bool = personas.stream().map(Persona::getTelefonos).flatMap(Collection::stream).map(Object::toString)
 				.allMatch(s -> s.startsWith("6") || s.startsWith("7"));
 
 		personas.stream().map(persona -> persona.getEdad()).reduce(0, Integer::sum);
 		personas.stream().map(persona -> persona.getEdad()).reduce(0, (suma, edad) -> suma + edad);
 		
+		@SuppressWarnings("unused")
 		int suma = 0;
 		
 		for (Persona persona : personas) {
