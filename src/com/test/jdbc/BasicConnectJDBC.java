@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class BasicConnectJDBC {
+	
 	private static final String URL = "jdbc:mysql://localhost:3306/students";
 	private static final String USER = "root";
 	private static final String PASSWORD = "12345678";

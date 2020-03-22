@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class OracleJdbcTest {
+	
 	String driverClass = "oracle.jdbc.driver.OracleDriver";
 
 	Connection con;

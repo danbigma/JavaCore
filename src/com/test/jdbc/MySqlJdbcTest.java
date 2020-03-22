@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MySqlJdbcTest {
+	
 	private final static String DRIVER_CLASS = "com.mysql.jdbc.Driver";
 
 	private Connection con;

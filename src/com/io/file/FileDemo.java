@@ -4,18 +4,18 @@ import java.io.File;
 
 public class FileDemo {
 	public static void main(String[] args) {
-		File f = null;
+		File file = null;
 		String[] strs = { "test1.txt", "test2.txt" };
 		try {
 			// for each string in string array
 			for (String s : strs) {
 				// create new file
-				f = new File(s);
-				f.createNewFile();
+				file = new File(s);
+				file.createNewFile();
 				// true if the file is executable
-				boolean bool = f.canExecute();
+				boolean bool = file.canExecute();
 				// find the absolute path
-				String a = f.getAbsolutePath();
+				String a = file.getAbsolutePath();
 				// prints absolute path
 				System.out.print(a);
 				// prints
