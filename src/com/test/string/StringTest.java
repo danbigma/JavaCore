@@ -23,7 +23,7 @@ public class StringTest {
 	private static void getRandomText(String text) {
 		int symbolsOnString = text.length();
 
-		System.out.println("Length - " + symbolsOnString);
+		System.out.println("Symbols on string - " + symbolsOnString);
 		System.out.println("Firt letter - " + text.charAt(0));
 		System.out.println("Last letter - " + text.charAt(symbolsOnString - 1));
 

@@ -16,13 +16,16 @@ public class Main {
 
 	private static void todayIs(Date date) {
 
-		Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
+		Date today = date; // Fri Jun 17 14:54:28 PDT 2016
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(today);
 
 		int numDay = cal.get(Calendar.DAY_OF_WEEK) - 1;
 
 		switch (numDay) {
+		case 0:
+			System.out.println("Hoy es " + Dias.DOMINGO.getDiaDeLaSemana());
+			break;
 		case 1:
 			System.out.println("Hoy es " + Dias.LUNES.getDiaDeLaSemana());
 			break;
@@ -40,9 +43,6 @@ public class Main {
 			break;
 		case 6:
 			System.out.println("Hoy es " + Dias.SABADO.getDiaDeLaSemana());
-			break;
-		case 7:
-			System.out.println("Hoy es " + Dias.DOMINGO.getDiaDeLaSemana());
 			break;
 		default:
 			System.out.println("Day is not defind");

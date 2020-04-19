@@ -12,7 +12,7 @@ public class Array {
 	
 	static {
 		System.out.println("Execute first!");
-		
+		System.out.println("----------------------------");
 		list.add("String 1");
 		list.add("String 2");
 		list.add("String 3");
@@ -27,9 +27,19 @@ public class Array {
 	
 	public static void main(String[] args) {
 
-		printForeach(fixesSizeList);
-		printForeach(arr);
-		printFor(arr);
+		// printForeach(fixesSizeList);
+		// printForeach(arr);
+		// printFor(arr);
+		
+		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+		
+		for (int i = 0; i < cars.length; i++) {
+			System.out.println(cars[i]);
+		}
+		System.out.println("----------------------------");
+		for (String i : cars) {
+			System.out.println(i);
+		}
 
 	}
 
