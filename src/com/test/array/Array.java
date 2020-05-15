@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Array {
-
+	
 	private final static int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	private final static List<Integer> fixesSizeList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-	private final static List<String> list = new ArrayList<String>();
+	private final static List<String> list = new ArrayList<>();
 	
 	static {
 		System.out.println("Execute first!");
@@ -43,7 +43,7 @@ public class Array {
 
 	}
 
-	private static void printForeach(List<Integer> fixessizelist) {
+	private static void printForeach(List<Integer> fixesSizeList) {
 		System.out.println("Method - printForeach");
 		System.out.println();
 		// foreach

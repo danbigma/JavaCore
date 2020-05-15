@@ -15,8 +15,13 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
 public class CryptoUtils {
+	
+	private CryptoUtils() {
+		throw new IllegalStateException("CryptoUtils.class");
+	}
+	
 	private static final String ALGORITHM = "AES";
-	private static final String TRANSFORMATION = "AES";
+	private static final String TRANSFORMATION = "AES/GCM/NoPadding";
 
 	public static void encrypt(String key, File inputFile, File outputFile) throws CryptoException {
 		doCrypto(Cipher.ENCRYPT_MODE, key, inputFile, outputFile);

@@ -48,7 +48,7 @@ public class AESFileEncryption {
 		SecretKey secret = new SecretKeySpec(secretKey.getEncoded(), "AES");
 
 		//
-		Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
 		cipher.init(Cipher.ENCRYPT_MODE, secret);
 		AlgorithmParameters params = cipher.getParameters();
 

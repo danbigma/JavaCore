@@ -34,6 +34,7 @@ package com.test.array;
 class ArrayDemo {
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("unused")
 		int[] anArrayAlternative = { 
 			    100, 200, 300,
 			    400, 500, 600, 

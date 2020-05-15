@@ -1,5 +1,6 @@
 package com.data.encryption;
 
+import java.nio.charset.StandardCharsets;
 import java.security.spec.KeySpec;
 import java.util.Base64;
 
@@ -35,9 +36,9 @@ public class AES256 {
 			SecretKey tmp = factory.generateSecret(spec);
 			SecretKeySpec secretKey = new SecretKeySpec(tmp.getEncoded(), "AES");
 
-			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+			Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivspec);
-			return Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")));
+			return Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes(StandardCharsets.UTF_8)));
 		} catch (Exception e) {
 			System.out.println("Error while encrypting: " + e.toString());
 		}
@@ -54,7 +55,7 @@ public class AES256 {
 			SecretKey tmp = factory.generateSecret(spec);
 			SecretKeySpec secretKey = new SecretKeySpec(tmp.getEncoded(), "AES");
 
-			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+			Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
 			cipher.init(Cipher.DECRYPT_MODE, secretKey, ivspec);
 			return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
 		} catch (Exception e) {

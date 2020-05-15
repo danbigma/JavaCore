@@ -3,6 +3,7 @@ package com.hashing.all;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.Arrays;
 
 public class SHAExample {
 
@@ -10,20 +11,20 @@ public class SHAExample {
 		String passwordToHash = "password";
 		String salt = getSalt();
 
-		String securePassword = get_SHA_1_SecurePassword(passwordToHash, salt);
+		String securePassword = getSHA1SecurePassword(passwordToHash, salt);
 		System.out.println(securePassword);
 
-		securePassword = get_SHA_256_SecurePassword(passwordToHash, salt);
+		securePassword = getSHA256SecurePassword(passwordToHash, salt);
 		System.out.println(securePassword);
 
-		securePassword = get_SHA_384_SecurePassword(passwordToHash, salt);
+		securePassword = getSHA384SecurePassword(passwordToHash, salt);
 		System.out.println(securePassword);
 
-		securePassword = get_SHA_512_SecurePassword(passwordToHash, salt);
+		securePassword = getSHA512SecurePassword(passwordToHash, salt);
 		System.out.println(securePassword);
 	}
 
-	private static String get_SHA_1_SecurePassword(String passwordToHash, String salt) {
+	private static String getSHA1SecurePassword(String passwordToHash, String salt) {
 		String generatedPassword = null;
 		try {
 			MessageDigest md = MessageDigest.getInstance("SHA-1");
@@ -40,7 +41,7 @@ public class SHAExample {
 		return generatedPassword;
 	}
 
-	private static String get_SHA_256_SecurePassword(String passwordToHash, String salt) {
+	private static String getSHA256SecurePassword(String passwordToHash, String salt) {
 		String generatedPassword = null;
 		try {
 			MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -57,7 +58,7 @@ public class SHAExample {
 		return generatedPassword;
 	}
 
-	private static String get_SHA_384_SecurePassword(String passwordToHash, String salt) {
+	private static String getSHA384SecurePassword(String passwordToHash, String salt) {
 		String generatedPassword = null;
 		try {
 			MessageDigest md = MessageDigest.getInstance("SHA-384");
@@ -74,7 +75,7 @@ public class SHAExample {
 		return generatedPassword;
 	}
 
-	private static String get_SHA_512_SecurePassword(String passwordToHash, String salt) {
+	private static String getSHA512SecurePassword(String passwordToHash, String salt) {
 		String generatedPassword = null;
 		try {
 			MessageDigest md = MessageDigest.getInstance("SHA-512");
@@ -96,6 +97,6 @@ public class SHAExample {
 		SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
 		byte[] salt = new byte[16];
 		sr.nextBytes(salt);
-		return salt.toString();
+		return Arrays.toString(salt);
 	}
 }

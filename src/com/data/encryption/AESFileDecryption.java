@@ -39,7 +39,7 @@ public class AESFileDecryption {
 		SecretKey secret = new SecretKeySpec(tmp.getEncoded(), "AES");
 
 		// file decryption
-		Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
 		cipher.init(Cipher.DECRYPT_MODE, secret, new IvParameterSpec(iv));
 		FileInputStream fis = new FileInputStream("encryptedfile.des");
 		FileOutputStream fos = new FileOutputStream("plainfile_decrypted.txt");

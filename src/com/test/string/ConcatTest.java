@@ -6,7 +6,7 @@ public class ConcatTest {
 	public static void main(String[] args) {
 		
 		long startTime = System.currentTimeMillis();
-		StringBuffer sb = new StringBuffer("Java");
+		StringBuilder sb = new StringBuilder("Java");
 		for (int i = 0; i < 10000; i++) {
 			sb.append("Tpoint");
 		}
