@@ -13,18 +13,15 @@ import java.util.Properties;
 
 public class MySqlJdbcTest {
 	
-	private final static String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-
 	private Connection con;
 
 	public void init(FileInputStream fs)
-			throws ClassNotFoundException, SQLException, FileNotFoundException, IOException {
+			throws ClassNotFoundException, SQLException, IOException {
 		Properties props = new Properties();
 		props.load(fs);
 		String url = props.getProperty("db.url");
 		String userName = props.getProperty("db.user");
 		String password = props.getProperty("db.password");
-		Class.forName(DRIVER_CLASS);
 
 		con = DriverManager.getConnection(url, userName, password);
 	}

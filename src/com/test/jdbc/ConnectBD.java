@@ -22,17 +22,12 @@ public class ConnectBD {
 	private static final String URL = UNIFORM_RESOURCE_LOCATOR;
 
 	public static void main(String[] args) {
-
 		Connection connection = getConnection();
-
 		closeConnection(connection);
-
 	}
 
 	private static Connection getConnection() {
-
 		Connection connection = null;
-
 		try {
 			connection = DriverManager.getConnection(URL, USER, PASSWORD);
 			if (connection != null) {
@@ -42,7 +37,6 @@ public class ConnectBD {
 			System.out.println("Fail to connect to database!");
 			System.out.println("Error: " + e.getMessage());
 		}
-
 		return connection;
 	}
 
