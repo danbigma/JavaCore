@@ -1,4 +1,4 @@
-package com.test.jdbc;
+package com.connection.jdbc;
 
 import java.io.File;
 import java.io.FileInputStream;
