@@ -1,13 +1,13 @@
 package com.study.herencia;
 
-public class Employee extends Person {
+public class EmployeePOJO extends Person {
 	
 	private int idEmployee;
 	private double salary;
 	private static int counter;
 	
 	
-	public Employee(String firstname, String lastname, String gender, double salary) {
+	public EmployeePOJO(String firstname, String lastname, String gender, double salary) {
 		super(firstname, lastname, gender);
 		this.idEmployee =  ++counter;
 		this.salary = salary;
