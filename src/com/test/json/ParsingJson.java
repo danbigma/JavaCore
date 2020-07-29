@@ -9,20 +9,18 @@ import org.json.simple.JSONObject;
 public class ParsingJson {
 
 	public static void main(String[] args) throws Exception {
-		
+
 		File fileJSON = new File("data/countries.json");
-		
+
 		if (fileJSON.exists()) {
 			JSONArray jsonObject = (JSONArray) UtilJSON.readJsonSimpleDemo(fileJSON.getAbsolutePath());
-			
 			for (int i = 0; jsonObject.size() > i; i++)
-                System.out.println(jsonObject.get(i));
+				System.out.println(jsonObject.get(i));
 		} else {
 			System.out.println("File does't exist!");
 		}
-		
-		//parsingJSONtoObject(filename0);		
 
+		// parsingJSONtoObject(filename0);
 	}
 
 	@SuppressWarnings("unchecked")
