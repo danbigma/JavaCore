@@ -1,7 +1,6 @@
 package com.test.json;
 
 import java.io.File;
-import java.util.Iterator;
 import java.util.List;
 
 import org.json.simple.JSONArray;
