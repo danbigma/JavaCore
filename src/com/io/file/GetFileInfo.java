@@ -1,6 +1,6 @@
 package com.io.file;
 
-import java.io.File; // Import the File class
+import java.io.File;
 
 public class GetFileInfo {
 	public static void main(String[] args) {

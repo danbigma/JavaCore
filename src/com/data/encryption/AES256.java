@@ -1,15 +1,14 @@
 package com.data.encryption;
 
-import java.nio.charset.StandardCharsets;
-import java.security.spec.KeySpec;
-import java.util.Base64;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
+import java.security.spec.KeySpec;
+import java.util.Base64;
 
 public class AES256 {
 	private static String secretKey = "secretKey";
@@ -28,7 +27,7 @@ public class AES256 {
 
 	public static String encrypt(String strToEncrypt, String secret) {
 		try {
-			byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // 16 byte
+			byte[] iv = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // 16 byte
 			IvParameterSpec ivspec = new IvParameterSpec(iv);
 
 			SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
@@ -47,7 +46,7 @@ public class AES256 {
 
 	public static String decrypt(String strToDecrypt, String secret) {
 		try {
-			byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };// 16 byte
+			byte[] iv = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};// 16 byte
 			IvParameterSpec ivspec = new IvParameterSpec(iv);
 
 			SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");

@@ -5,9 +5,10 @@ public class Person {
 	private String firstname;
 	private String lastname;
 	private String gender;
-	
-	
-	public Person() {}
+
+
+	public Person() {
+	}
 
 	public Person(String firstname, String lastname, String gender) {
 		this.firstname = firstname;
@@ -43,5 +44,5 @@ public class Person {
 	public String toString() {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", gender=" + gender + "]";
 	}
-	
+
 }

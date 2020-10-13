@@ -14,10 +14,10 @@ public class BufferedInputStreamTest {
 
 			int c;
 			while ((c = bis.read()) != -1) {
-	
+
 				System.out.print((char) c);
 			}
-			
+
 		} catch (Exception e) {
 
 			System.out.println(e.getMessage());

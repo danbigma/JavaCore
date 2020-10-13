@@ -15,10 +15,10 @@ public class UrlInfo {
 			// Create a URL object by providing URL in the form of String.
 			url = new URL("http://www.hubberspot.com/search/label/EJB?Java=ejb");
 
-			InetAddress ip=InetAddress.getByName(url.getHost());
-			  
-			System.out.println("Host Name: "+ip.getHostName());  
-			System.out.println("IP Address: "+ip.getHostAddress());  
+			InetAddress ip = InetAddress.getByName(url.getHost());
+
+			System.out.println("Host Name: " + ip.getHostName());
+			System.out.println("IP Address: " + ip.getHostAddress());
 
 			// getHost() : Returns the host name of this URL.
 			String host = url.getHost();
@@ -37,7 +37,7 @@ public class UrlInfo {
 
 			// getRef() : Gets the anchor of this URL.
 			String reference = url.getRef();
-			
+
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("URL: " + url.toString());
 			System.out.println("-----------------------------------------------------------");

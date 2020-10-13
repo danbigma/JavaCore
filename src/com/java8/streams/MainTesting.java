@@ -1,10 +1,6 @@
 package com.java8.streams;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MainTesting {
@@ -31,10 +27,10 @@ public class MainTesting {
 
 		personas.stream().map(persona -> persona.getEdad()).reduce(0, Integer::sum);
 		personas.stream().map(persona -> persona.getEdad()).reduce(0, (suma, edad) -> suma + edad);
-		
+
 		@SuppressWarnings("unused")
 		int suma = 0;
-		
+
 		for (Persona persona : personas) {
 			int edad = persona.getEdad();
 			suma += edad;

@@ -1,20 +1,19 @@
 package com.data.encryption;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.security.AlgorithmParameters;
-import java.security.SecureRandom;
-import java.security.spec.KeySpec;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.security.AlgorithmParameters;
+import java.security.SecureRandom;
+import java.security.spec.KeySpec;
 
 public class AESFileEncryption {
-	
+
 	public static void main(String[] args) throws Exception {
 
 		// file to be encrypted
@@ -80,7 +79,7 @@ public class AESFileEncryption {
 		outFile.close();
 
 		System.out.println("File Encrypted.");
-		
+
 	}
 
 }

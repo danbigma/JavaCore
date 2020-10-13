@@ -9,7 +9,7 @@ public class BufferedOutputStreamTest {
 
 		String text = "Hello world!";
 		try (FileOutputStream out = new FileOutputStream("notes.txt");
-				BufferedOutputStream bos = new BufferedOutputStream(out)) {
+		     BufferedOutputStream bos = new BufferedOutputStream(out)) {
 			// to bytes
 			byte[] buffer = text.getBytes();
 			bos.write(buffer, 0, buffer.length);

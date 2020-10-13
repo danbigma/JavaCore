@@ -8,7 +8,7 @@ public enum Dias {
 	JUEVES(4, "Jueves"),
 	VIERNES(5, "Viernes"),
 	SABADO(6, "Sabado");
-	
+
 	private final int numDiaDeLaSemana;
 	private final String diaDeLaSemana;
 

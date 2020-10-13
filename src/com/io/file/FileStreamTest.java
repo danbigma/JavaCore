@@ -1,17 +1,13 @@
 package com.io.file;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 public class FileStreamTest {
 	public static void main(String args[]) {
 
 		try {
 			String msg = "Hello Danylo";
-			
+
 			byte bWrite[] = msg.getBytes();
 			OutputStream os = new FileOutputStream("test.txt");
 			for (int x = 0; x < bWrite.length; x++) {

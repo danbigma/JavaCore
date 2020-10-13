@@ -33,14 +33,14 @@ package com.test.array;
 
 class ArrayDemo {
 	public static void main(String[] args) {
-		
+
 		@SuppressWarnings("unused")
-		int[] anArrayAlternative = { 
-			    100, 200, 300,
-			    400, 500, 600, 
-			    700, 800, 900, 1000
-			};
-		
+		int[] anArrayAlternative = {
+				100, 200, 300,
+				400, 500, 600,
+				700, 800, 900, 1000
+		};
+
 		// declares an array of integers
 		int[] anArray;
 

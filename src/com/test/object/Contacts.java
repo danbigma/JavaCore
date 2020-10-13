@@ -1,13 +1,13 @@
 package com.test.object;
 
 public class Contacts {
-	
+
 	private int phoneNumber;
 	private String address;
 	private String city;
 	private String country;
-	
-	
+
+
 	public Contacts(int phoneNumber, String address, String city, String country) {
 		super();// extends of Object, first object in java and very important
 		this.phoneNumber = phoneNumber;
@@ -54,5 +54,5 @@ public class Contacts {
 				+ country + "]";
 	}
 
-	
+
 }

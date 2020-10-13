@@ -4,7 +4,7 @@ public class ArrayMatrix {
 
 	public static void main(String[] args) {
 
-		showArrayMatrix(4,5);
+		showArrayMatrix(4, 5);
 
 	}
 

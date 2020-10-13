@@ -52,7 +52,7 @@ public class StringTest {
 				String firstLetter = randomWord.substring(0, 1);
 				randomWord = firstLetter.toUpperCase() + randomWord.substring(1);
 			}
-			
+
 			if (i == 10) {
 				randomWord = randomWord + ".";
 			}

@@ -20,14 +20,14 @@ public class LoadPropInputStream {
 			System.out.println(prop.getProperty("db.user"));
 			System.out.println(prop.getProperty("db.password"));
 			System.out.println("-----------------------------");
-			
+
 			prop.load(input);
-			
+
 			prop.forEach((key, value) -> System.out.println("Key : " + key + ", Value : " + value));
 			System.out.println("-----------------------------");
-			
+
 			prop.keySet().forEach(x -> System.out.println(x));
-			
+
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}

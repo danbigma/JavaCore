@@ -1,5 +1,10 @@
 package com.file.encryption;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,18 +13,12 @@ import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
-
 public class CryptoUtils {
-	
+
 	private CryptoUtils() {
 		throw new IllegalStateException("CryptoUtils.class");
 	}
-	
+
 	private static final String ALGORITHM = "AES";
 	private static final String TRANSFORMATION = "AES/GCM/NoPadding";
 

@@ -1,13 +1,9 @@
 package com.hashing.all;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.security.MessageDigest;
-
 import org.apache.commons.io.IOUtils;
+
+import java.io.*;
+import java.security.MessageDigest;
 
 public enum Hash {
 	MD5("MD5"), SHA1("SHA1"), SHA256("SHA-256"), SHA512("SHA-512");
@@ -64,5 +60,5 @@ public enum Hash {
 			e.getStackTrace();
 		}
 	}
-	
+
 }

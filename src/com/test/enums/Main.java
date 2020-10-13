@@ -23,30 +23,30 @@ public class Main {
 		int numDay = cal.get(Calendar.DAY_OF_WEEK) - 1;
 
 		switch (numDay) {
-		case 0:
-			System.out.println("Hoy es " + Dias.DOMINGO.getDiaDeLaSemana());
-			break;
-		case 1:
-			System.out.println("Hoy es " + Dias.LUNES.getDiaDeLaSemana());
-			break;
-		case 2:
-			System.out.println("Hoy es " + Dias.MARTES.getDiaDeLaSemana());
-			break;
-		case 3:
-			System.out.println("Hoy es " + Dias.MIERCOLES.getDiaDeLaSemana());
-			break;
-		case 4:
-			System.out.println("Hoy es " + Dias.JUEVES.getDiaDeLaSemana());
-			break;
-		case 5:
-			System.out.println("Hoy es " + Dias.VIERNES.getDiaDeLaSemana());
-			break;
-		case 6:
-			System.out.println("Hoy es " + Dias.SABADO.getDiaDeLaSemana());
-			break;
-		default:
-			System.out.println("Day is not defind");
-			break;
+			case 0:
+				System.out.println("Hoy es " + Dias.DOMINGO.getDiaDeLaSemana());
+				break;
+			case 1:
+				System.out.println("Hoy es " + Dias.LUNES.getDiaDeLaSemana());
+				break;
+			case 2:
+				System.out.println("Hoy es " + Dias.MARTES.getDiaDeLaSemana());
+				break;
+			case 3:
+				System.out.println("Hoy es " + Dias.MIERCOLES.getDiaDeLaSemana());
+				break;
+			case 4:
+				System.out.println("Hoy es " + Dias.JUEVES.getDiaDeLaSemana());
+				break;
+			case 5:
+				System.out.println("Hoy es " + Dias.VIERNES.getDiaDeLaSemana());
+				break;
+			case 6:
+				System.out.println("Hoy es " + Dias.SABADO.getDiaDeLaSemana());
+				break;
+			default:
+				System.out.println("Day is not defind");
+				break;
 		}
 	}
 

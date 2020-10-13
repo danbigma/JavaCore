@@ -1,10 +1,9 @@
 package com.test.json;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import java.io.File;
 
 public class ParsingJson {
 

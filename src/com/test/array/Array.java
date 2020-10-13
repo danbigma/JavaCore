@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Array {
-	
-	private final static int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+	private final static int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	private final static List<Integer> fixesSizeList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 	private final static List<String> list = new ArrayList<>();
-	
+
 	static {
 		System.out.println("Execute first!");
 		System.out.println("----------------------------");
@@ -24,15 +24,15 @@ public class Array {
 		list.add("String 9");
 		list.add("String 10");
 	}
-	
+
 	public static void main(String[] args) {
 
 		// printForeach(fixesSizeList);
 		// printForeach(arr);
 		// printFor(arr);
-		
+
 		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-		
+
 		for (int i = 0; i < cars.length; i++) {
 			System.out.println(cars[i]);
 		}
@@ -51,7 +51,7 @@ public class Array {
 			System.out.println("Number - " + i);
 		}
 		System.out.println("----------------------------------------");
-		
+
 	}
 
 	private static void printForeach(int[] arr) {

@@ -3,7 +3,6 @@ package com.data.types;
 public class JavaDataTypes {
 
 	public static void main(String[] args) {
-		
 		// Primitive data types
 		/* **************************************************************************************************************
 		   Data Type	Size		Description
@@ -17,18 +16,18 @@ public class JavaDataTypes {
 		   boolean		1 bit		Stores true or false values
 		   char		    2 bytes		Stores a single character/letter or ASCII values 
 		************************************************************************************************************** */
-		
+
 		int myNum = 5;               // Integer (whole number)
 		float myFloatNum = 5.99f;    // Floating point number
 		char myLetter = 'D';         // Character
 		boolean myBool = true;       // Boolean
-		String myText = "Hello";     // String 
-		
-		System.out.println("int - " 	+ myNum);
-		System.out.println("float - " 	+ myFloatNum);
-		System.out.println("char - " 	+ myLetter);
+		String myText = "Hello";     // String
+
+		System.out.println("int - " + myNum);
+		System.out.println("float - " + myFloatNum);
+		System.out.println("char - " + myLetter);
 		System.out.println("boolean - " + myBool);
-		System.out.println("String - " 	+ myText);
+		System.out.println("String - " + myText);
 
 	}
 

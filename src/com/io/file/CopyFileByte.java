@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CopyFileByte {
+
 	public static void main(String args[]) throws IOException {
 		FileReader in = null;
 		FileWriter out = null;

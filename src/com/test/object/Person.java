@@ -10,7 +10,7 @@ public class Person {
 	private Contacts contacts;
 	public String publicVariable;
 	private static int counter; // static field
-	
+
 	// Empty constructor with static variable
 	public Person() {
 		this.idPerson = ++counter;
@@ -53,6 +53,7 @@ public class Person {
 		validationAge(age);
 		this.age = age;
 	}
+
 	// Method return full name of person
 	public String getFullName() {
 		return this.firstname + " " + this.lastname;
@@ -61,18 +62,21 @@ public class Person {
 	public String sayHello() {
 		return "Hello " + this.firstname;
 	}
+
 	// method validation firstname
 	private static void validationFirstname(String firstname) {
 		if (firstname == null || "".equals(firstname)) {
 			throw new IllegalArgumentException("Firstname is invalid");
 		}
 	}
+
 	// method validation lastname
 	private static void validationLastname(String lastname) {
 		if (lastname == null || "".equals(lastname)) {
 			throw new IllegalArgumentException("Lastname is invalid");
 		}
 	}
+
 	// method validation age
 	private static void validationAge(int age) {
 		if (age < 1 || age > 100) {
@@ -87,7 +91,7 @@ public class Person {
 	public void setSmoke(boolean smoke) {
 		this.smoke = smoke;
 	}
-	
+
 	public static int getCounter() {
 		return counter;
 	}

@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 public class ConnectBD {
 
-	private static final String CONNECTOR 	= "jdbc:";
-	private static final String DATA_BASE 	= "mysql:";
-	private static final String HOST 		= "localhost:";
-	private static final String PORT 		= "3306";
-	private static final String TABLE 		= "web_student_tracker";
-	private static final String USER 		= "root";
-	private static final String PASSWORD 	= "12345678";
+	private static final String CONNECTOR = "jdbc:";
+	private static final String DATA_BASE = "mysql:";
+	private static final String HOST = "localhost:";
+	private static final String PORT = "3306";
+	private static final String TABLE = "web_student_tracker";
+	private static final String USER = "root";
+	private static final String PASSWORD = "12345678";
 	// private static final String useSSL = "?useSSL=false&amp";
 
 	private static final String TIME_ZOME = "serverTimezone=UTC";

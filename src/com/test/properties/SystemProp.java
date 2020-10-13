@@ -22,16 +22,16 @@ public class SystemProp {
 		System.out.println("User dir - " + userDirectory);
 
 		// System.getProperties().list(System.out);
-		
+
 		// Get System Defined Properties
 		Properties systemProps = System.getProperties();
 		Set<Object> keySet = systemProps.keySet();
-		
-		for(Object obj : keySet){
+
+		for (Object obj : keySet) {
 			String key = (String) obj;
-			System.out.println("{"+obj+"="+systemProps.getProperty(key)+"}");
+			System.out.println("{" + obj + "=" + systemProps.getProperty(key) + "}");
 		}
-		
+
 
 	}
 

@@ -3,9 +3,10 @@ package com.io.file;
 import java.io.File;
 
 public class FileDemo {
+
 	public static void main(String[] args) {
 		File file = null;
-		String[] strs = { "test1.txt", "test2.txt" };
+		String[] strs = {"test1.txt", "test2.txt"};
 		try {
 			// for each string in string array
 			for (String s : strs) {
@@ -26,4 +27,5 @@ public class FileDemo {
 			e.printStackTrace();
 		}
 	}
+
 }

@@ -1,15 +1,15 @@
 package com.laboratory;
 
 public class DispositivoEntrada {
-	
+
 	private String tipoDeEntrada;
 	private String marca;
-	
-    //constructor que inicializa las variables
-    public DispositivoEntrada(String tipoDeEntrada, String marca) {
-        this.tipoDeEntrada = tipoDeEntrada;
-        this.marca = marca;
-    }
+
+	//constructor que inicializa las variables
+	public DispositivoEntrada(String tipoDeEntrada, String marca) {
+		this.tipoDeEntrada = tipoDeEntrada;
+		this.marca = marca;
+	}
 
 	public String getTipoDeEntrada() {
 		return tipoDeEntrada;
@@ -31,5 +31,5 @@ public class DispositivoEntrada {
 	public String toString() {
 		return "DispositivosEntrada [tipoDeEntrada=" + tipoDeEntrada + ", marca=" + marca + "]";
 	}
-	
+
 }

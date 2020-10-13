@@ -8,7 +8,7 @@ public class PatternDAO {
 }
 
 interface Data {
-	String getData() ;
+	String getData();
 }
 
 class DB implements Data {
@@ -21,11 +21,11 @@ class DB implements Data {
 	public String getData() {
 		return getDataFromDB();
 	}
-	
+
 }
 
 class FileSystem implements Data {
-	
+
 	public String getDataFromFS() {
 		return "Get data from FileSystem";
 	}
@@ -34,5 +34,5 @@ class FileSystem implements Data {
 	public String getData() {
 		return getDataFromFS();
 	}
-	
+
 }

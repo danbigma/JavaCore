@@ -1,11 +1,7 @@
 package com.crud.console;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,10 +12,10 @@ public class Function {
 	public Map<Integer, Integer> listUsers() {
 
 		Map<Integer, Integer> usersmap = new HashMap<Integer, Integer>();
-		
+
 		ConnetionJDBC connectionJDBC = new ConnetionJDBC();
 		Connection connection = connectionJDBC.getConnection();
-		
+
 		Statement statement = null;
 		ResultSet resultset = null;
 
@@ -84,9 +80,9 @@ public class Function {
 
 		ConnetionJDBC connectionJDBC = new ConnetionJDBC();
 		Connection connection = connectionJDBC.getConnection();
-		
+
 		PreparedStatement statement = null;
-		
+
 		int key = 0;
 
 		try {
@@ -98,9 +94,9 @@ public class Function {
 		Map<Integer, Integer> usersmap = listUsers();
 
 		System.out.print("Delete user number - ");
-		
+
 		boolean isInt = false;
-		
+
 		do {
 			if (scanner.hasNextInt()) {
 				key = scanner.nextInt();
@@ -109,7 +105,7 @@ public class Function {
 				scanner = new Scanner(System.in);
 			}
 		} while (!isInt);
-			
+
 		int id = usersmap.get(key);
 
 		String sql = "DELETE FROM PERSONS WHERE ID = ?";
@@ -125,14 +121,14 @@ public class Function {
 	}
 
 	public void modifUser() {
-		
+
 		Scanner scanner = null;
 
 		ConnetionJDBC connectionJDBC = new ConnetionJDBC();
 		Connection connection = connectionJDBC.getConnection();
-		
+
 		PreparedStatement statement = null;
-		
+
 		int key = 0;
 
 		try {
@@ -143,7 +139,7 @@ public class Function {
 
 		Map<Integer, Integer> usersmap = listUsers();
 		System.out.print("Modif user number - ");
-		
+
 		boolean isInt = false;
 
 		do {
@@ -154,7 +150,7 @@ public class Function {
 				scanner = new Scanner(System.in);
 			}
 		} while (!isInt);
-		
+
 		int id = usersmap.get(key);
 
 		System.out.print("New name: ");
@@ -171,25 +167,25 @@ public class Function {
 			e.printStackTrace();
 		}
 	}
-	
-    public void saveNewUser(String name) {
+
+	public void saveNewUser(String name) {
 
 		ConnetionJDBC connectionJDBC = new ConnetionJDBC();
 		Connection connection = connectionJDBC.getConnection();
 
-        PreparedStatement statement = null;
+		PreparedStatement statement = null;
 
-        String sql = "INSERT INTO PERSONS (LASTNAME) VALUES (?)";
+		String sql = "INSERT INTO PERSONS (LASTNAME) VALUES (?)";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            statement.setString(1, name);
-            statement.executeUpdate();
-            System.out.println(name + " user add to database");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+		try {
+			statement = connection.prepareStatement(sql);
+			statement.setString(1, name);
+			statement.executeUpdate();
+			System.out.println(name + " user add to database");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
-    }
+	}
 
 }

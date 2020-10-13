@@ -17,7 +17,7 @@ public class ArrayOfBytesToFile {
 
 		try {
 
-			File file = new File("temp\\testing1.txt");
+			File file = new File("test1.txt");
 			byte[] bFile = new byte[(int) file.length()];
 
 			// read file into bytes[]

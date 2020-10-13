@@ -1,15 +1,6 @@
 package com.test.array;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.Vector;
+import java.util.*;
 
 public class CollectionsDemo {
 	public static void main(String[] args) {
@@ -60,8 +51,8 @@ public class CollectionsDemo {
 		Vector<String> v = new Vector<String>();
 		v.add("Danylo");
 		v.add("Helene");
-		v.add("Ivan");  
-		v.add("Alexa"); 
+		v.add("Ivan");
+		v.add("Alexa");
 		System.out.println();
 		System.out.println("Vector Elements");
 		System.out.println(v);
@@ -71,7 +62,7 @@ public class CollectionsDemo {
 //		}
 		System.out.println();
 		System.out.println("-----------------------------------------------------");
-		
+
 		ArrayList<String> list = new ArrayList<String>();// Creating arraylist
 		list.add("Danylo");// Adding object in arraylist
 		list.add("Helene");
@@ -96,7 +87,7 @@ public class CollectionsDemo {
 		list.forEach(a -> { // Here, we are using lambda expression
 			System.out.println(a);
 		});
-		
+
 		System.out.println("-----------------------------------------------------");
 		System.out.println("Traversing list through forEachRemaining() method:");
 		Iterator<String> itr = list.iterator();
@@ -104,14 +95,14 @@ public class CollectionsDemo {
 		{
 			System.out.println(a);
 		});
-		
+
 		System.out.println("-----------------------------------------------------");
 		ArrayList<String> al = new ArrayList<String>();
 		System.out.println("Is ArrayList Empty: " + al.isEmpty());
 		al.add("Danylo");
 		al.add("Helene");
-		al.add("Ivan");  
-		al.add("Alexa"); 
+		al.add("Ivan");
+		al.add("Alexa");
 		System.out.println("After Insertion");
 		System.out.println("Is ArrayList Empty: " + al.isEmpty());
 	}

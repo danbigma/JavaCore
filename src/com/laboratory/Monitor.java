@@ -1,17 +1,17 @@
 package com.laboratory;
 
 public class Monitor {
-	
+
 	private final int idMonitor;
 	private String marca;
 	private double inch;
 	private static int contadorMonitores;
-	
-	
+
+
 	public Monitor() {
 		idMonitor = ++contadorMonitores;
 	}
-	
+
 	public Monitor(String marca, double size) {
 		this();
 		this.marca = marca;
@@ -41,6 +41,6 @@ public class Monitor {
 	public static int getContadorMonitores() {
 		return contadorMonitores;
 	}
-	
-	
+
+
 }
