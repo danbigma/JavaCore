@@ -6,13 +6,16 @@ public class FileDemo {
 
 	public static void main(String[] args) {
 		File file = null;
-		String[] strs = {"test1.txt", "test2.txt"};
+		String[] strs = {"data//test1.txt", "data//test2.txt"};
 		try {
 			// for each string in string array
 			for (String s : strs) {
 				// create new file
 				file = new File(s);
-				file.createNewFile();
+				if (file.exists()) {
+					file.delete();
+					file.createNewFile();
+				}
 				// true if the file is executable
 				boolean bool = file.canExecute();
 				// find the absolute path

@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ArrayOfBytesToFile {
-	private static final String UPLOAD_FOLDER = "temp\\";
+	private static final String UPLOAD_FOLDER = "data\\";
 
 	public static void main(String[] args) {
 
