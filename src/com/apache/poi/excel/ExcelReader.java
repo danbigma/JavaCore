@@ -25,8 +25,8 @@ public class ExcelReader {
 		System.out.println("Workbook has " + workbook.getNumberOfSheets() + " Sheets : ");
 
 		/*
-		 * =============================================================
-		 * Iterating over all the sheets in the workbook (Multiple ways)
+		 * ============================================================= Iterating over
+		 * all the sheets in the workbook (Multiple ways)
 		 * =============================================================
 		 */
 
@@ -51,8 +51,8 @@ public class ExcelReader {
 		});
 
 		/*
-		 * ==================================================================
-		 * Iterating over all the rows and columns in a Sheet (Multiple ways)
+		 * ================================================================== Iterating
+		 * over all the rows and columns in a Sheet (Multiple ways)
 		 * ==================================================================
 		 */
 
@@ -106,27 +106,27 @@ public class ExcelReader {
 
 	private static void printCellValue(Cell cell) {
 		switch (cell.getCellTypeEnum()) {
-			case BOOLEAN:
-				System.out.print(cell.getBooleanCellValue());
-				break;
-			case STRING:
-				System.out.print(cell.getRichStringCellValue().getString());
-				break;
-			case NUMERIC:
-				if (DateUtil.isCellDateFormatted(cell)) {
-					System.out.print(cell.getDateCellValue());
-				} else {
-					System.out.print(cell.getNumericCellValue());
-				}
-				break;
-			case FORMULA:
-				System.out.print(cell.getCellFormula());
-				break;
-			case BLANK:
-				System.out.print("");
-				break;
-			default:
-				System.out.print("");
+		case BOOLEAN:
+			System.out.print(cell.getBooleanCellValue());
+			break;
+		case STRING:
+			System.out.print(cell.getRichStringCellValue().getString());
+			break;
+		case NUMERIC:
+			if (DateUtil.isCellDateFormatted(cell)) {
+				System.out.print(cell.getDateCellValue());
+			} else {
+				System.out.print(cell.getNumericCellValue());
+			}
+			break;
+		case FORMULA:
+			System.out.print(cell.getCellFormula());
+			break;
+		case BLANK:
+			System.out.print("");
+			break;
+		default:
+			System.out.print("");
 		}
 
 		System.out.print("\t");
