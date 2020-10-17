@@ -2,7 +2,13 @@ package com.io.file;
 
 import java.io.File;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class FileDemo {
+	
+	private static final Logger logger = LogManager.getLogger(FileDemo.class);
 
 	public static void main(String[] args) {
 		File file = null;
@@ -27,7 +33,7 @@ public class FileDemo {
 			}
 		} catch (Exception e) {
 			// if any I/O error occurs
-			e.printStackTrace();
+			logger.debug(e.getMessage());
 		}
 	}
 

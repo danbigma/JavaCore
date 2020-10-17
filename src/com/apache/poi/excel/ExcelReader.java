@@ -1,11 +1,19 @@
 package com.apache.poi.excel;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 /**
  * Created by rajeevkumarsingh on 18/12/17.
@@ -15,6 +23,8 @@ public class ExcelReader {
 
 	public static final String SAMPLE_XLS_FILE_PATH = "./sample-xls-file.xls";
 	public static final String SAMPLE_XLSX_FILE_PATH = "./sample-xlsx-file.xlsx";
+	
+	private static final Logger logger = LogManager.getLogger(ExcelReader.class);
 
 	public static void main(String[] args) throws IOException, InvalidFormatException {
 
@@ -23,6 +33,7 @@ public class ExcelReader {
 
 		// Retrieving the number of sheets in the Workbook
 		System.out.println("Workbook has " + workbook.getNumberOfSheets() + " Sheets : ");
+		logger.debug(SAMPLE_XLSX_FILE_PATH);
 
 		/*
 		 * ============================================================= Iterating over
