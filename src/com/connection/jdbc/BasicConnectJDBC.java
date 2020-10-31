@@ -9,14 +9,14 @@ public class BasicConnectJDBC {
 	private static final String URL = "jdbc:mysql://localhost:3306/students";
 	private static final String USER = "root";
 	private static final String PASSWORD = "12345678";
+	private static int state = 404;
 
 	public static void main(String[] args) {
 		try {
 			Connection connection = getConnection();
-			if (isOpenConnection(connection)) {
-				System.out.println("Connected to database!");
-				closeConnection(connection);
-			}
+			boolean connectionIsOpen = isOpenConnection(connection);
+			getStateConnection(connectionIsOpen);
+			closeConnection(connection);
 		} catch (Exception e) {
 			System.out.println("Fail connect database!");
 		}
@@ -29,11 +29,18 @@ public class BasicConnectJDBC {
 	}
 
 	private static boolean isOpenConnection(Connection connection) {
-		boolean open = false;
+		boolean connectionIsOpen = false;
 		if (connection != null) {
-			open = true;
+			state = 200; 
+			connectionIsOpen = true;
 		}
-		return open;
+		return connectionIsOpen;
+	}
+	
+	private static void getStateConnection(boolean connectionIsOpen) throws SQLException {
+		if (connectionIsOpen && state == 200) {
+			System.out.println("Connected to database!");
+		}
 	}
 
 	private static Connection getConnection() throws SQLException {
