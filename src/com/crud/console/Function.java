@@ -1,22 +1,19 @@
 package com.crud.console;
 
-
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-
 public class Function {
 
 	public Map<Integer, Integer> listUsers() {
 
-		Map<Integer, Integer> usersmap = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> usersmap = new HashMap<>();
 
 		ConnetionJDBC connectionJDBC = new ConnetionJDBC();
 		Connection connection = connectionJDBC.getConnection();
 
-		Statement statement = null;
 		ResultSet resultset = null;
 
 		String query = "SELECT * FROM PERSONS";
@@ -24,9 +21,7 @@ public class Function {
 		String result = "";
 		Integer id = null;
 
-		try {
-
-			statement = connection.createStatement();
+		try (Statement statement = connection.createStatement()) {
 			resultset = statement.executeQuery(query);
 
 			System.out.println("--------------List of users--------------");
@@ -40,17 +35,14 @@ public class Function {
 				}
 			}
 			System.out.println("-----------------------------------------");
-
 		} catch (SQLException e) {
 			System.out.println("Connection Failed! Check output console");
 			e.printStackTrace();
 		}
-
 		return usersmap;
 	}
 
 	public void addNewUser() {
-
 		Scanner scanner = null;
 		String name = "";
 
@@ -63,7 +55,7 @@ public class Function {
 		System.out.print("Please enter name of the new user: ");
 
 		try {
-			name = scanner.nextLine();
+			name = validScanner(scanner);
 		} catch (Exception e) {
 			System.out.println("Exception scanner " + e.getMessage());
 		}
@@ -188,4 +180,11 @@ public class Function {
 
 	}
 
+	public static String validScanner(Scanner scanner) {
+		if (scanner == null) {
+			throw new IllegalArgumentException("The Scanner argument cannot be null");
+		}
+		return scanner.next();
+	}
+	
 }

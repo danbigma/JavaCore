@@ -17,15 +17,12 @@ public class ConnetionJDBC {
 	private static final String URL = UniformResourceLocator;
 
 	public Connection getConnection() {
-
 		Connection connection = null;
-
 		try {
 			connection = DriverManager.getConnection(URL, USER, PASSWORD);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 		return connection;
 	}
 

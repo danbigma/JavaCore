@@ -20,11 +20,9 @@ public class Main {
 		Function function = new Function();
 
 		do {
-
 			menu.getMenu();
-
 			int action = scanner.nextInt();
-
+			
 			switch (action) {
 				case 1:
 					function.addNewUser();
