@@ -22,19 +22,14 @@ public class UrlInfo {
 
 			// getHost() : Returns the host name of this URL.
 			String host = url.getHost();
-
 			// getPath() : Gets the path of this URL.
 			String path = url.getPath();
-
 			// getQuery() : Gets the searched query in the URL.
 			String query = url.getQuery();
-
 			// getProtocol() : Gets the protocol used to refer this URL.
 			String protocol = url.getProtocol();
-
 			// getAuthority() : Gets the authority of the URL.
 			String authority = url.getAuthority();
-
 			// getRef() : Gets the anchor of this URL.
 			String reference = url.getRef();
 

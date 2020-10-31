@@ -43,8 +43,8 @@ public class WordGenerator {
 			XWPFRun run = paragraph.createRun();
 			run.setText("VK Number (Parameter): " + line + " here you type your text...\n");
 			document.write(out);
-
 			// Close document
+			document.close();
 			out.close();
 			System.out.println("createdWord" + "_" + line + ".docx" + " written successfully");
 		}

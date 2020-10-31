@@ -14,7 +14,7 @@ interface Data {
 class DB implements Data {
 
 	public String getDataFromDB() {
-		return "Get data from FileSystem";
+		return "Get data from DataBase";
 	}
 
 	@Override

@@ -18,7 +18,6 @@ public class ParsingJson {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	public static void parsingJSONtoObject(String filename) throws Exception {
 
 		JSONObject jsonObject = (JSONObject) UtilJSON.readJsonSimpleDemo(filename);
