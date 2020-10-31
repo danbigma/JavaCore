@@ -1,9 +1,8 @@
-package com.test.object;
+package com.object.classtest;
 
 public class Main {
 
 	public static void main(String[] args) {
-
 		// create a new instance of object Person
 		Person person = new Person();// create new object of person
 		// create a new instance of object Contacts
@@ -30,8 +29,6 @@ public class Main {
 		System.out.println(person2.toString());
 
 		System.out.println("Counter " + Person.getCounter());
-
 	}
-
 
 }

@@ -1,4 +1,4 @@
-package com.test.object;
+package com.object.classtest;
 
 public class Person {
 

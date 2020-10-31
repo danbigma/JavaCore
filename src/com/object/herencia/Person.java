@@ -1,11 +1,10 @@
-package com.study.herencia;
+package com.object.herencia;
 
 public class Person {
 
 	private String firstname;
 	private String lastname;
 	private String gender;
-
 
 	public Person() {
 	}
@@ -38,6 +37,10 @@ public class Person {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	
+	public String getFullname() {
+		return this.firstname + " " + this.lastname;
 	}
 
 	@Override

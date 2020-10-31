@@ -1,4 +1,4 @@
-package com.study.herencia;
+package com.object.herencia;
 
 import java.util.Date;
 
@@ -8,7 +8,6 @@ public class Client extends Person {
 	private String namecompany;
 	private Date registered;
 	private static int counter;
-
 
 	public Client() {
 		super();
@@ -47,7 +46,8 @@ public class Client extends Person {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Client [idClient=" + idClient + ", namecompany=" + namecompany + ", registered=" + registered + "]";
+		return super.toString() + "Client [idClient=" + idClient + ", namecompany=" + namecompany + ", registered="
+				+ registered + "]";
 	}
 
 }

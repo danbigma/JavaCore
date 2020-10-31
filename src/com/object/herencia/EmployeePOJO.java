@@ -1,11 +1,10 @@
-package com.study.herencia;
+package com.object.herencia;
 
 public class EmployeePOJO extends Person {
 
 	private int idEmployee;
 	private double salary;
 	private static int counter;
-
 
 	public EmployeePOJO(String firstname, String lastname, String gender, double salary) {
 		super(firstname, lastname, gender);

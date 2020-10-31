@@ -1,4 +1,4 @@
-package com.test.testclass;
+package com.object.testclass;
 
 public class ClassTesting {
 
