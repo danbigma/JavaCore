@@ -12,7 +12,7 @@ public class ParsingJson {
 		File fileJSON = new File("data/countries.json");
 		String filename0 = fileJSON.getAbsolutePath();
 
-		//readJSON(fileJSON, filename0);
+		// readJSON(fileJSON, filename0);
 
 		parsingJSONtoObject(filename0);
 
@@ -22,11 +22,12 @@ public class ParsingJson {
 
 		JSONObject jsonObject = (JSONObject) UtilJSON.readJsonSimpleDemo(filename);
 		JSONArray countriesArray = (JSONArray) jsonObject.get("Countries");
-		
+
 		for (int i = 0; i < countriesArray.size(); i++) {
 			JSONObject countrieJSON = (JSONObject) countriesArray.get(i);
-			Countrie countrie = new Countrie((String) countrieJSON.get("name"),(String) countrieJSON.get("code"),
-					(String) countrieJSON.get("capital"), (String) countrieJSON.get("region"), (String) countrieJSON.get("flag"));
+			Countrie countrie = new Countrie((String) countrieJSON.get("name"), (String) countrieJSON.get("code"),
+					(String) countrieJSON.get("capital"), (String) countrieJSON.get("region"),
+					(String) countrieJSON.get("flag"));
 			System.out.println(countrie);
 		}
 
