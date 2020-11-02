@@ -1,12 +1,12 @@
 package com.io.file;
 
-public enum Path {
+public enum PathExample {
 
 	TEMPFOLDER("tempfolder");
 
 	private String path;
 
-	private Path(String path) {
+	private PathExample(String path) {
 		this.path = path;
 	}
 
