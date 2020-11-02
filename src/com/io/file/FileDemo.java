@@ -27,25 +27,28 @@ public class FileDemo {
 				File file = new File(s);
 				if (!file.exists()) {
 					boolean fileCreated = file.createNewFile();
-					if (fileCreated)
-						logger.info("File was been created with name: " + file.getName());
+					if (fileCreated) {
+						System.out.println("File was been created with name: " + file.getName());
+						sleepSystem(1000);
+					}
 					// true if the file is executable
 					boolean setExecute = file.setExecutable(true);
 					if (setExecute) {
-						logger.info("File " + file.getName() + "change to executable.");
+						System.out.println("File " + file.getName() + " change to executable.");
+						sleepSystem(1000);
 					}
 					boolean isExecute = file.canExecute();
 					// find the absolute path
-					String a = file.getAbsolutePath();
+					String absolutePath = file.getAbsolutePath();
 					// prints absolute path
-					System.out.print(a);
+					System.out.print("Path > " + absolutePath);
 					// prints
-					logger.debug(" is executable: " + isExecute);
+					System.out.println(" is executable: " + isExecute);
 				}
 			}
 		} catch (Exception e) {
 			// if any I/O error occurs
-			logger.debug(e.getMessage());
+			logger.error(e.getMessage());
 		}
 	}
 
@@ -55,13 +58,23 @@ public class FileDemo {
 			String filename = path.getFileName().toString();
 			boolean isDeleted = cleanUp(path);
 			if (isDeleted) {
-				logger.debug("File " + filename + " was deleted correctly.");
+				System.out.println("File " + filename + " was deleted correctly.");
+				sleepSystem(1000);
+
 			}
 		}
 	}
 
 	private static boolean cleanUp(Path path) throws IOException {
 		return Files.deleteIfExists(path);
+	}
+
+	private static void sleepSystem(long mil) {
+		try {
+			Thread.sleep(mil);
+		} catch (Exception e) {
+			System.out.println("Thread.sleep(1000) > error");
+		}
 	}
 
 }
