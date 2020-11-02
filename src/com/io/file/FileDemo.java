@@ -28,11 +28,11 @@ public class FileDemo {
 				if (!file.exists()) {
 					boolean fileCreated = file.createNewFile();
 					if (fileCreated)
-						System.out.println("File was been created with name: " + file.getName());
+						logger.info("File was been created with name: " + file.getName());
 					// true if the file is executable
 					boolean setExecute = file.setExecutable(true);
 					if (setExecute) {
-						System.out.println("File " + file.getName() + "change to executable.");
+						logger.info("File " + file.getName() + "change to executable.");
 					}
 					boolean isExecute = file.canExecute();
 					// find the absolute path
@@ -40,7 +40,7 @@ public class FileDemo {
 					// prints absolute path
 					System.out.print(a);
 					// prints
-					System.out.println(" is executable: " + isExecute);
+					logger.debug(" is executable: " + isExecute);
 				}
 			}
 		} catch (Exception e) {
@@ -55,7 +55,7 @@ public class FileDemo {
 			String filename = path.getFileName().toString();
 			boolean isDeleted = cleanUp(path);
 			if (isDeleted) {
-				System.out.println("File " + filename + " was deleted correctly.");
+				logger.debug("File " + filename + " was deleted correctly.");
 			}
 		}
 	}
