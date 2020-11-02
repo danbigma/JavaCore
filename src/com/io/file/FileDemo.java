@@ -1,6 +1,7 @@
 package com.io.file;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,8 +16,11 @@ public class FileDemo {
 
 	public static void main(String[] args) throws IOException {
 		String[] strs = { "data//test1.txt", "data//test2.txt" };
+		String text = "Hello from Java joputa! WTF?!";
+		
 		deleteFilesIfExists(strs);
 		createFilesWithNames(strs);
+		writeToFile(text, strs[0]);
 	}
 
 	private static void createFilesWithNames(String[] filenames) {
@@ -48,6 +52,14 @@ public class FileDemo {
 			}
 		} catch (Exception e) {
 			// if any I/O error occurs
+			logger.error(e.getMessage());
+		}
+	}
+	
+	private static void writeToFile(String text, String filaname) {
+		try(FileWriter file = new FileWriter(new File(filaname))) {
+			file.write(text);
+		} catch (IOException e) {
 			logger.error(e.getMessage());
 		}
 	}
