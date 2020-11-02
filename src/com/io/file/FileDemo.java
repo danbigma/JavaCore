@@ -69,9 +69,9 @@ public class FileDemo {
 		return Files.deleteIfExists(path);
 	}
 
-	private static void sleepSystem(long mil) {
+	private static void sleepSystem(long milliseconds) {
 		try {
-			Thread.sleep(mil);
+			Thread.sleep(milliseconds);
 		} catch (Exception e) {
 			System.out.println("Thread.sleep(1000) > error");
 		}
