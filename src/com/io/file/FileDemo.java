@@ -15,10 +15,8 @@ public class FileDemo {
 
 	public static void main(String[] args) throws IOException {
 		String[] strs = { "data//test1.txt", "data//test2.txt" };
-
 		deleteFilesIfExists(strs);
 		createFilesWithNames(strs);
-
 	}
 
 	private static void createFilesWithNames(String[] filenames) {
