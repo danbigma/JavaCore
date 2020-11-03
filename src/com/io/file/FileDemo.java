@@ -72,7 +72,6 @@ public class FileDemo {
 			if (isDeleted) {
 				System.out.println("File " + filename + " was deleted correctly.");
 				sleepSystem(1000);
-
 			}
 		}
 	}
