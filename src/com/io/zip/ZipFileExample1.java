@@ -12,20 +12,16 @@ import java.util.zip.ZipOutputStream;
 public class ZipFileExample1 {
 
 	public static void main(String[] args) {
-
+		
 		Path source = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "data/foo.txt");
 		String zipFileName = "example.zip";
 
 		try {
-
 			ZipFileExample1.zipSingleFile(source, zipFileName);
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		System.out.println("Done");
-
 	}
 
 	// Zip a single file
