@@ -1,14 +1,20 @@
 package com.apache.poi.excel;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelWriter {
 
@@ -28,10 +34,10 @@ public class ExcelWriter {
 		employees.add(new Employee("Steve Maiden", "steve@example.com", dateOfBirth.getTime(), 1800000.0));
 	}
 
-	public static void main(String[] args) throws IOException, InvalidFormatException {
-		// Create a Workbook
-		Workbook workbook = new XSSFWorkbook(); // new HSSFWorkbook() for
-		// generating `.xls` file
+	public static void main(String[] args) throws IOException {
+		// Create a Workbook `.xlsx`
+		Workbook workbook = new XSSFWorkbook(); 
+		// new HSSFWorkbook() for generating `.xls` file
 
 		/*
 		 * CreationHelper helps us create instances of various things like
