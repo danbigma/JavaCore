@@ -8,6 +8,10 @@ import org.apache.pdfbox.pdmodel.PDPage;
 
 public class Main {
 
+	private static final String fileSeparator = "file.separator";
+	private static final String userDir = "file.separator";
+	private static final String fileNamePDF = "blank.pdf";
+
 	public static void main(String[] args) {
 		PDDocument doc = new PDDocument();
 		try {
@@ -19,10 +23,12 @@ public class Main {
 				doc.addPage(blankPage);
 			}
 			// Saving the document
-			doc.save("C:\\dev\\GIT_local\\JavaCore\\data\\blank.pdf");
-			
-			File filePDF = new File("C:\\dev\\GIT_local\\JavaCore\\data\\blank.pdf");
-			
+			doc.save(System.getProperty(userDir) + System.getProperty(fileSeparator) + "data"
+					+ System.getProperty(fileSeparator) + fileNamePDF);
+
+			File filePDF = new File(System.getProperty(userDir) + System.getProperty(fileSeparator) + "data"
+					+ System.getProperty(fileSeparator) + fileNamePDF);
+
 			System.out.println("PDF created wiht name: " + filePDF.getName());
 			// Closing the document
 			doc.close();
