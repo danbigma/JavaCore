@@ -32,6 +32,6 @@ public class StringPerfomance {
 			bldString.append(i).append("; Hi to you ").append(i * 2);
 		}
 		end = System.currentTimeMillis();
-		System.out.println("String Builder = " + ((end - start)) + " millisecond");
+		System.out.println("String Builder = " + (end - start) + " millisecond");
 	}
 }

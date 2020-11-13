@@ -25,9 +25,11 @@ public class ParsingJson {
 
 		for (int i = 0; i < countriesArray.size(); i++) {
 			JSONObject countrieJSON = (JSONObject) countriesArray.get(i);
-			Countrie countrie = new Countrie((String) countrieJSON.get("name"), (String) countrieJSON.get("code"),
-					(String) countrieJSON.get("capital"), (String) countrieJSON.get("region"),
-					(String) countrieJSON.get("flag"));
+			Countrie countrie = new Countrie((String) countrieJSON.get("name"),
+					(String) countrieJSON.get("code"), (String) countrieJSON.get("capital"),
+					(String) countrieJSON.get("region"), (String) countrieJSON.get("flag"));
+			
+			// print to console
 			System.out.println(countrie);
 		}
 

@@ -1,5 +1,7 @@
 package com.test.string;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class StringTest {
@@ -27,7 +29,12 @@ public class StringTest {
 		System.out.println("Firt letter - " + text.charAt(0));
 		System.out.println("Last letter - " + text.charAt(symbolsOnString - 1));
 
-		Random random = new Random();
+		Random random = null;
+		try {
+			random = SecureRandom.getInstanceStrong();
+		} catch (NoSuchAlgorithmException e) {
+			System.out.println(e.getMessage());
+		}
 
 		String[] words = text.split(" ");
 
@@ -40,11 +47,11 @@ public class StringTest {
 
 			randomWord = randomWord.toLowerCase();
 
-			if (randomWord.indexOf(",") > 0) {
+			if (randomWord.indexOf(",") > -1) {
 				randomWord = randomWord.substring(0, randomWord.indexOf(","));
 			}
 
-			if (randomWord.indexOf(".") > 0) {
+			if (randomWord.indexOf(".") > -1) {
 				randomWord = randomWord.substring(0, randomWord.indexOf("."));
 			}
 
@@ -58,7 +65,6 @@ public class StringTest {
 			}
 
 			System.out.print(randomWord + " ");
-
 		}
 	}
 

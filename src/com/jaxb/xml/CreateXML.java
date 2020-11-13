@@ -5,7 +5,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
 
-public class Main {
+public class CreateXML {
 
 	public static void main(String[] args) {
 		try {
