@@ -5,7 +5,7 @@ import java.util.*;
 public class CollectionsDemo {
 	public static void main(String[] args) {
 		// ArrayList
-		List<String> a1 = new ArrayList<String>();
+		List<String> a1 = new ArrayList<>();
 		a1.add("Danylo");
 		a1.add("Helene");
 		a1.add("Ivan");
@@ -15,7 +15,7 @@ public class CollectionsDemo {
 		System.out.println("-----------------------------------------------------");
 
 		// LinkedList
-		List<String> l1 = new LinkedList<String>();
+		List<String> l1 = new LinkedList<>();
 		l1.add("Danylo");
 		l1.add("Helene");
 		l1.add("Ivan");
@@ -26,7 +26,7 @@ public class CollectionsDemo {
 		System.out.println("-----------------------------------------------------");
 
 		// HashSet
-		Set<String> s1 = new HashSet<String>();
+		Set<String> s1 = new HashSet<>();
 		s1.add("Danylo");
 		s1.add("Helene");
 		s1.add("Ivan");
@@ -37,7 +37,7 @@ public class CollectionsDemo {
 		System.out.println("-----------------------------------------------------");
 
 		// HashMap
-		Map<String, String> m1 = new HashMap<String, String>();
+		Map<String, String> m1 = new HashMap<>();
 		m1.put("Danylo", "29");
 		m1.put("Ivan", "23");
 		m1.put("Helene", "30");
@@ -48,7 +48,7 @@ public class CollectionsDemo {
 		System.out.println("-----------------------------------------------------");
 
 		// Vector
-		Vector<String> v = new Vector<String>();
+		Vector<String> v = new Vector<>();
 		v.add("Danylo");
 		v.add("Helene");
 		v.add("Ivan");
@@ -63,7 +63,7 @@ public class CollectionsDemo {
 		System.out.println();
 		System.out.println("-----------------------------------------------------");
 
-		ArrayList<String> list = new ArrayList<String>();// Creating arraylist
+		ArrayList<String> list = new ArrayList<>();// Creating arraylist
 		list.add("Danylo");// Adding object in arraylist
 		list.add("Helene");
 		list.add("Ivan");
@@ -97,7 +97,7 @@ public class CollectionsDemo {
 		});
 
 		System.out.println("-----------------------------------------------------");
-		ArrayList<String> al = new ArrayList<String>();
+		ArrayList<String> al = new ArrayList<>();
 		System.out.println("Is ArrayList Empty: " + al.isEmpty());
 		al.add("Danylo");
 		al.add("Helene");
