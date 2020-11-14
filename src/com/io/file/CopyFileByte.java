@@ -11,7 +11,7 @@ public class CopyFileByte {
 	private static final String USER_DIR = "user.dir";
 
 	private static final String INPUT = System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + "data"
-			+ System.getProperty(FILE_SEPARATOR) + "input.txt";
+			+ System.getProperty(FILE_SEPARATOR) + "Lorem.txt";
 	private static final String OUTPUT = System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + "data"
 			+ System.getProperty(FILE_SEPARATOR) + "output.txt";
 
@@ -20,16 +20,6 @@ public class CopyFileByte {
 		FileWriter out = null;
 
 		String[] fileNames = { INPUT, OUTPUT };
-
-		for (String f : fileNames) {
-			File newfile = new File(f);
-			if (newfile.exists()) {
-				newfile.delete();
-				newfile.createNewFile();
-			} else {
-				newfile.createNewFile();
-			}
-		}
 
 		try {
 			in = new FileReader(new File(fileNames[0]));
