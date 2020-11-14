@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CreationHelper;
@@ -14,11 +15,12 @@ import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelWriter {
 
-	private static String[] columns = {"Name", "Email", "Date Of Birth", "Salary"};
+	private static final String FILE_SEPARATOR = "file.separator";
+	private static final String USER_DIR = "user.dir";
+	private static String[] columns = { "Name", "Email", "Date Of Birth", "Salary" };
 	private static List<Employee> employees = new ArrayList<>();
 
 	// Initializing employees data to insert into the excel file
@@ -36,13 +38,12 @@ public class ExcelWriter {
 
 	public static void main(String[] args) throws IOException {
 		// Create a Workbook `.xlsx`
-		Workbook workbook = new XSSFWorkbook(); 
+		Workbook workbook = new HSSFWorkbook();// new XSSFWorkbook();
 		// new HSSFWorkbook() for generating `.xls` file
 
 		/*
-		 * CreationHelper helps us create instances of various things like
-		 * DataFormat, Hyperlink, RichTextString etc, in a format (HSSF, XSSF)
-		 * independent way
+		 * CreationHelper helps us create instances of various things like DataFormat,
+		 * Hyperlink, RichTextString etc, in a format (HSSF, XSSF) independent way
 		 */
 		CreationHelper createHelper = workbook.getCreationHelper();
 
@@ -52,7 +53,7 @@ public class ExcelWriter {
 		// Create a Font for styling header cells
 		Font headerFont = workbook.createFont();
 		headerFont.setBold(true);
-		headerFont.setFontHeightInPoints((short) 14);
+		headerFont.setFontHeightInPoints((short) 12);
 		headerFont.setColor(IndexedColors.RED.getIndex());
 
 		// Create a CellStyle with the font
@@ -95,7 +96,9 @@ public class ExcelWriter {
 		}
 
 		// Write the output to a file
-		FileOutputStream fileOut = new FileOutputStream("poi-generated-file.xlsx");
+		FileOutputStream fileOut = new FileOutputStream(
+				System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + "data"
+						+ System.getProperty(FILE_SEPARATOR) + "poi-generated-file.xls");
 		workbook.write(fileOut);
 		fileOut.close();
 

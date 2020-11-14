@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.File;
 
 public class CopyFileByte {
-
+	
 	private static final String FILE_SEPARATOR = "file.separator";
 	private static final String USER_DIR = "user.dir";
 
