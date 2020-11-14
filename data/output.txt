@@ -1,2 +1,4 @@
 Testing file
 Using method convert file to array of bytes
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper nec magna sed faucibus. Donec porta dui sed nibh tincidunt mollis. Phasellus id congue augue. Nulla blandit justo a quam faucibus, et maximus enim semper. Aenean ut blandit mi. Morbi vulputate, erat ut egestas varius, augue dui tristique ex, nec gravida ipsum quam fermentum turpis. Vestibulum imperdiet elit vitae risus vehicula, a vehicula nibh aliquam. Suspendisse ex enim, dapibus nec vulputate in, blandit sed velit.

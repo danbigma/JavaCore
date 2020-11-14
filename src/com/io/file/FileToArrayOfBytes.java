@@ -35,8 +35,15 @@ public class FileToArrayOfBytes {
 			System.out.println("");
 			System.out.println("Array of bytes ==>");
 			// Print bytes[]
+			int counter = 0;
+			int row = 8;
 			for (int i = 0; i < bFile.length; i++) {
-				System.out.print(bFile[i]);
+				System.out.print(bFile[i] + " ");
+				counter++;
+				if (counter == row) {
+					System.out.println("");
+					counter = 0;
+				}
 			}
 
 		} catch (IOException e) {
