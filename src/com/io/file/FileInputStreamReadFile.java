@@ -5,12 +5,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class FileInputStreamReadFile {
-	private static final String fileSeparator = "file.separator";
-	private static final String userDir = "file.separator";
-	private static final String fileNameTXT = "robots.txt";
+	private static final String FILE_SEPARATOR = "file.separator";
+	private static final String USER_DIR = "user.dir";
+	private static final String FILE_NAME_TXT = "robots.txt";
 
 	public static void main(String[] args) {
-		File file = new File("data" + System.getProperty(fileSeparator) + fileNameTXT);
+		File file = new File(System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + "data"
+				+ System.getProperty(FILE_SEPARATOR) + FILE_NAME_TXT);
 		FileInputStream fis = null;
 
 		try {

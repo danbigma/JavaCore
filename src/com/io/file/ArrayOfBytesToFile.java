@@ -9,28 +9,28 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ArrayOfBytesToFile {
-	private static final String UPLOAD_FOLDER = "data\\";
+	private static final String UPLOAD_FOLDER = "data";
+	private static final String FILE_SEPARATOR = "file.separator";
+	private static final String USER_DIR = "file.separator";
 
 	public static void main(String[] args) {
-
 		FileInputStream fileInputStream = null;
 
 		try {
-
 			File file = new File("test1.txt");
 			byte[] bFile = new byte[(int) file.length()];
-
 			// read file into bytes[]
 			fileInputStream = new FileInputStream(file);
 			fileInputStream.read(bFile);
-
 			// save bytes[] into a file
-			writeBytesToFile(bFile, UPLOAD_FOLDER + "test1.txt");
-			writeBytesToFileClassic(bFile, UPLOAD_FOLDER + "test2.txt");
-			writeBytesToFileNio(bFile, UPLOAD_FOLDER + "test3.txt");
+			writeBytesToFile(bFile,
+					System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER + "test1.txt");
+			writeBytesToFileClassic(bFile,
+					System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER + "test2.txt");
+			writeBytesToFileNio(bFile,
+					System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER + "test3.txt");
 
 			System.out.println("Done");
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -41,19 +41,15 @@ public class ArrayOfBytesToFile {
 					e.printStackTrace();
 				}
 			}
-
 		}
 	}
 
 	// Classic, < JDK7
 	private static void writeBytesToFileClassic(byte[] bFile, String fileDest) {
-
 		FileOutputStream fos = null;
-
 		try {
 			fos = new FileOutputStream(fileDest);
 			fos.write(bFile);
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -65,29 +61,25 @@ public class ArrayOfBytesToFile {
 				}
 			}
 		}
-
 	}
 
 	// Since JDK 7 - try resources
 	private static void writeBytesToFile(byte[] bFile, String fileDest) {
-
 		try (FileOutputStream fileOuputStream = new FileOutputStream(fileDest)) {
 			fileOuputStream.write(bFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	// Since JDK 7, NIO
 	private static void writeBytesToFileNio(byte[] bFile, String fileDest) {
-
 		try {
 			Path path = Paths.get(fileDest);
 			Files.write(path, bFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
+	
 }
