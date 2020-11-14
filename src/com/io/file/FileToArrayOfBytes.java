@@ -12,7 +12,8 @@ public class FileToArrayOfBytes {
 
 		try {
 			// convert file to byte[]
-			byte[] bFile = readBytesFromFile("temp\\testing1.txt");
+			byte[] bFile = readBytesFromFile(System.getProperty("user.dir") + System.getProperty("file.separator")
+					+ "data" + System.getProperty("file.separator") + "file-to-array-bytes.txt");
 
 			// java nio
 			// byte[] bFile = Files.readAllBytes(new
@@ -21,7 +22,8 @@ public class FileToArrayOfBytes {
 			// Files.readAllBytes(Paths.get("C:\\temp\\testing1.txt"));
 
 			// save byte[] into a file
-			Path path = Paths.get("temp\\test2.txt");
+			Path path = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "data"
+					+ System.getProperty("file.separator") + "output.txt");
 			Files.write(path, bFile);
 
 			System.out.println("Done");
@@ -29,6 +31,12 @@ public class FileToArrayOfBytes {
 			// Print bytes[]
 			for (int i = 0; i < bFile.length; i++) {
 				System.out.print((char) bFile[i]);
+			}
+			System.out.println("");
+			System.out.println("Array of bytes ==>");
+			// Print bytes[]
+			for (int i = 0; i < bFile.length; i++) {
+				System.out.print(bFile[i]);
 			}
 
 		} catch (IOException e) {
@@ -38,19 +46,15 @@ public class FileToArrayOfBytes {
 	}
 
 	private static byte[] readBytesFromFile(String filePath) {
-
 		FileInputStream fileInputStream = null;
 		byte[] bytesArray = null;
 
 		try {
-
 			File file = new File(filePath);
 			bytesArray = new byte[(int) file.length()];
-
 			// read file into bytes[]
 			fileInputStream = new FileInputStream(file);
 			fileInputStream.read(bytesArray);
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -61,11 +65,8 @@ public class FileToArrayOfBytes {
 					e.printStackTrace();
 				}
 			}
-
 		}
-
 		return bytesArray;
-
 	}
 
 }

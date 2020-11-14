@@ -1,0 +1,2 @@
+Testing file
+Using method convert file to array of bytes
