@@ -2,6 +2,7 @@ package com.java.utils;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class MimeTypes {
 	
@@ -37,7 +38,10 @@ public class MimeTypes {
 		MIMETYPE_MAPPING.put(".ppsm", "application/vnd.ms-powerpoint.slideshow.macroEnabled.12");
 		MIMETYPE_MAPPING.put(".mdb", "application/vnd.ms-access");
 		
-		System.out.println(MIMETYPE_MAPPING);
+		 
+		 for (Entry<String, String> entry : MIMETYPE_MAPPING.entrySet()) {
+			 System.out.println(entry.getKey() + " --> " + entry.getValue());
+		 }
 	}
 
 }
