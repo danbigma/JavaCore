@@ -11,9 +11,13 @@ import java.util.zip.ZipOutputStream;
 
 public class ZipFileExample1 {
 
+	private static final String FILE_SEPARATOR = "file.separator";
+	private static final String USER_DIR = "user.dir";
+
 	public static void main(String[] args) {
-		
-		Path source = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "data/foo.txt");
+
+		Path source = Paths.get(System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + "data"
+				+ System.getProperty(FILE_SEPARATOR) + "robots.txt");
 		String zipFileName = "example.zip";
 
 		try {
@@ -32,7 +36,8 @@ public class ZipFileExample1 {
 			return;
 		}
 
-		try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFileName));
+		try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(System.getProperty(USER_DIR)
+				+ System.getProperty(FILE_SEPARATOR) + "data" + System.getProperty(FILE_SEPARATOR) + zipFileName));
 				FileInputStream fis = new FileInputStream(source.toFile());) {
 
 			ZipEntry zipEntry = new ZipEntry(source.getFileName().toString());
@@ -45,6 +50,6 @@ public class ZipFileExample1 {
 			}
 			zos.closeEntry();
 		}
-
 	}
+
 }
