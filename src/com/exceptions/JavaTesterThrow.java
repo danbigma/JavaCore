@@ -17,10 +17,10 @@ public class JavaTesterThrow {
 	}
 }
 
-//Both throw and throws are the concepts of exception handing
-//in which throw is used to explicitly throw an exception from
-//a method or any block of code while throws are used in the signatur
-//e of the method to indicate that this method might throw one of the
-//listed type exceptions.
+// Both throw and throws are the concepts of exception handing
+// in which throw is used to explicitly throw an exception from
+// a method or any block of code while throws are used in the signatur
+// e of the method to indicate that this method might throw one of the
+// listed type exceptions.
 //
-//The following are the important differences between throw and throws.
+// The following are the important differences between throw and throws.
