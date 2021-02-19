@@ -2,7 +2,7 @@ package com.patterns;
 
 public class PatternDAO {
 	public static void main(String[] args) {
-		Data getdate = new DB();
+		Data getdate = new FileSystem();
 		System.out.println(getdate.getData());
 	}
 }

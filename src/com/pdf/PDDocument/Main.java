@@ -9,7 +9,7 @@ import org.apache.pdfbox.pdmodel.PDPage;
 public class Main {
 
 	private static final String fileSeparator = "file.separator";
-	private static final String userDir = "file.separator";
+	private static final String userDir = "user.dir";
 	private static final String fileNamePDF = "blank.pdf";
 
 	public static void main(String[] args) {
