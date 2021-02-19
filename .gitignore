@@ -28,3 +28,5 @@ local.properties
 /bin/
 /.DS_Store
 .idea
+src/.DS_Store
+data/.DS_Store
