@@ -11,6 +11,7 @@ public class BasicConnectJDBC {
 	private static final String PASSWORD = "12345678";
 	private static int state = 404;
 
+	// main method -->
 	public static void main(String[] args) {
 		try {
 			Connection connection = getConnection();
@@ -22,12 +23,14 @@ public class BasicConnectJDBC {
 		}
 	}
 
+	// close connection 
 	private static void closeConnection(Connection connection) throws SQLException {
 		if (connection != null) {
 			connection.close();
 		}
 	}
-
+	
+	// check if connection is open
 	private static boolean isOpenConnection(Connection connection) {
 		boolean connectionIsOpen = false;
 		if (connection != null) {
@@ -37,6 +40,7 @@ public class BasicConnectJDBC {
 		return connectionIsOpen;
 	}
 	
+	// check connection state 
 	private static void getStateConnection(boolean connectionIsOpen) throws SQLException {
 		if (connectionIsOpen && state == 200) {
 			System.out.println("Connected to database!");
