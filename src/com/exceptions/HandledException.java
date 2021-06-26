@@ -2,6 +2,7 @@ package com.exceptions;
 
 public class HandledException extends Exception {
 
+	private static final long serialVersionUID = 7787665609083514342L;
 	private String code;
 
 	public HandledException(String code, String message) {
