@@ -6,14 +6,18 @@ public class JavaTesterThrow {
 		if (age < 18) {
 			throw new ArithmeticException("Not Eligible for voting");
 		} else {
-			System.out.println("Eligible for voting");
+			print("Eligible for voting");
 		}
 	}
 
 	public static void main(String[] args) {
 		JavaTesterThrow obj = new JavaTesterThrow();
 		obj.checkAge(13);
-		System.out.println("End Of Program");
+		print("End Of Program");
+	}
+	
+	private static void print(Object out) {
+		System.out.println(out);
 	}
 }
 

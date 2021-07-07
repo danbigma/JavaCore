@@ -23,12 +23,14 @@ public class JavaDataTypes {
 		boolean myBool = true;       // Boolean
 		String myText = "Hello";     // String
 
-		System.out.println("int - " + myNum);
-		System.out.println("float - " + myFloatNum);
-		System.out.println("char - " + myLetter);
-		System.out.println("boolean - " + myBool);
-		System.out.println("String - " + myText);
-
+		print("int - " + myNum);
+		print("float - " + myFloatNum);
+		print("char - " + myLetter);
+		print("boolean - " + myBool);
+		print("String - " + myText);
 	}
 
+	private static void print(Object out) {
+		System.out.println(out);
+	}
 }

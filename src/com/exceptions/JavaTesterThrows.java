@@ -9,10 +9,14 @@ public class JavaTesterThrows {
 	public static void main(String[] args) {
 		JavaTesterThrows obj = new JavaTesterThrows();
 		try {
-			System.out.println(obj.division(15, 0));
+			print(obj.division(15, 3));
 		} catch (ArithmeticException e) {
-			System.out.println("You shouldn't divide number by zero");
+			print("You shouldn't divide number by zero");
 		}
+	}
+	
+	private static void print(Object out) {
+		System.out.println(out);
 	}
 }
 

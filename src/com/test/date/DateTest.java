@@ -11,25 +11,25 @@ public class DateTest {
 	public static void main(String[] args) throws ParseException {
 
 		LocalDateTime myDateObj = LocalDateTime.now();
-		System.out.println("Before formatting: " + myDateObj);
+		print("Before formatting: " + myDateObj);
 		DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		String formattedDate = myDateObj.format(myFormatObj);
 
-		System.out.println("After formatting: " + formattedDate);
-		System.out.println("----------------------------------");
+		print("After formatting: " + formattedDate);
+		print("----------------------------------");
 
 		Date newDate = new Date();
-		System.out.println("Basic date format - " + newDate);
-		System.out.println("----------------------------------");
-		System.out.println("dd.MM.yyyy - " + convertDateWithDots(myDateObj));
-		System.out.println("----------------------------------");
-		System.out.println("dd-MM-yyyy - " + convertDateWithDashed(myDateObj));
-		System.out.println("----------------------------------");
-		System.out.println("dd/MM/yyyy - " + convertDateWithSlash(myDateObj));
+		print("Basic date format - " + newDate);
+		print("----------------------------------");
+		print("dd.MM.yyyy - " + convertDateWithDots(myDateObj));
+		print("----------------------------------");
+		print("dd-MM-yyyy - " + convertDateWithDashed(myDateObj));
+		print("----------------------------------");
+		print("dd/MM/yyyy - " + convertDateWithSlash(myDateObj));
 
 		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(convertDateWithSlash(myDateObj));
-		System.out.println(date);
-		System.out.println("----------------------------------");
+		print(date);
+		print("----------------------------------");
 	}
 
 	// convert date to date with special format with dots  
@@ -48,6 +48,10 @@ public class DateTest {
 	private static String convertDateWithSlash(LocalDateTime date) {
 		DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return date.format(myFormatObj);
+	}
+	
+	private static void print(Object out) {
+		System.out.println(out);
 	}
 
 }
