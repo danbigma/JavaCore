@@ -1,0 +1,6 @@
+1 - Put your cursor on a class name (or method) and press Shift+F2 to jump to the web version of your library's Javadoc.
+2 - Edit -> Toggle Block Selection tool (or just hit Shift+Alt+A) is demonstrated below.
+3 - Press Alt+Up/Dn to move the selected lines along with the cursor.Indenting is corrected for you. Alt+Shift+Up/Down copies the selection.
+4 - The 'enclosing' selection (Alt+Shift+Up/Dn) shortcut selects theen closing structure, e.g. var->if->method->class.
+5 - Always safer to 'Invert equals' on literal strings in order to avoid a NullPointerException! Ctrl+1 does it for you.
+6 - Use the 'new' template for quick object creation.
