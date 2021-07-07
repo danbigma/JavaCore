@@ -18,8 +18,17 @@ public class StringTest {
 				+ "purus, at posuere nulla lectus non ex. Nunc rutrum sagittis ultrices."
 				+ " Curabitur mattis turpis odio, eu fringilla quam mattis sed. Fusce eget pretium velit.";
 
-		getRandomText(text);
-
+		//getRandomText(text);
+		int l = length(text);
+		
+		System.out.println(l);
+	}
+	
+	private static int length(String s) {
+		if (s == null) {
+			return -1;
+		}
+		return s.length();
 	}
 
 	private static void getRandomText(String text) {
