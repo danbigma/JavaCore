@@ -4,7 +4,7 @@ import java.io.File;
 
 public class GetFileInfo {
 	public static void main(String[] args) {
-		File myObj = new File("plainfile.txt");
+		File myObj = new File("data/Lorem.txt");
 		if (myObj.exists()) {
 			System.out.println("File name: " + myObj.getName());
 			System.out.println("Absolute path: " + myObj.getAbsolutePath());

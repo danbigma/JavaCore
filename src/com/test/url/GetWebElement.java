@@ -1,8 +1,8 @@
 package com.test.url;
 
+import java.io.File;
 import java.util.List;
-
-import org.apache.log4j.BasicConfigurator;
+import org.apache.commons.lang3.SystemUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -15,11 +15,21 @@ public class GetWebElement {
 
 	private static final Logger logger = LogManager.getLogger(GetWebElement.class);
 
+	protected static final String osName = "os.name";
+
 	public static void main(String[] args) throws InterruptedException {
 
 		logger.info("Start");
 
-		String pathToDriver = "C:/dev/git_local/JavaCore/apps/geckodriver.exe";// "/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox-bin";
+		File nameFile;
+
+		if (SystemUtils.IS_OS_WINDOWS) {
+			nameFile = new File("apps/geckodriver.exe");
+		} else {
+			nameFile = new File("apps/geckodriver 2");
+		}
+
+		String pathToDriver = nameFile.getAbsolutePath();
 		String webdriver = "webdriver.gecko.driver";
 
 	    System.setProperty(webdriver, pathToDriver);
@@ -40,6 +50,14 @@ public class GetWebElement {
 
 	public static void print(String data) {
 		logger.info(data);
+	}
+
+	public String getOperatingSystem() {
+		return System.getProperty(osName);
+	}
+
+	public static String getOperatingSystemSystemUtils() {
+		return SystemUtils.OS_NAME;
 	}
 
 }
