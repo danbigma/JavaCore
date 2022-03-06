@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ASCIIArtService {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         int width = 100;
         int height = 30;
