@@ -13,7 +13,8 @@ public class UrlInfo {
 		try {
 
 			// Create a URL object by providing URL in the form of String.
-			url = new URL("http://www.hubberspot.com/search/label/EJB?Java=ejb");
+			// url = new URL("http://www.hubberspot.com/search/label/EJB?Java=ejb");
+			url = new URL("http://danylobigma.com");
 
 			InetAddress ip = InetAddress.getByName(url.getHost());
 

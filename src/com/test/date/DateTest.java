@@ -1,5 +1,9 @@
 package com.test.date;
 
+import com.test.url.GetWebElement;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -7,6 +11,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DateTest {
+
+	private static final Logger logger = LogManager.getLogger(DateTest.class);
 
 	public static void main(String[] args) throws ParseException {
 
@@ -51,7 +57,7 @@ public class DateTest {
 	}
 	
 	private static void print(Object out) {
-		System.out.println(out);
+		logger.info(out);
 	}
 
 }
