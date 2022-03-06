@@ -13,7 +13,7 @@ public class ConnetionJDBC {
 
 	private static final String USER = "root";
 	private static final String PASSWORD = "12345678";
-	private static final String UniformResourceLocator = dbConnector + "//" + dbHost + dbPort + "/" + dbTable;
+	private static final String UniformResourceLocator = dbConnector + "//" + dbHost + dbPort + "/" + dbTable + "?serverTimezone=UTC";
 	private static final String URL = UniformResourceLocator;
 
 	public Connection getConnection() {

@@ -6,23 +6,17 @@ import java.util.List;
 
 public class Array {
 
-	private final static int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-	private final static List<Integer> fixesSizeList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-	private final static List<String> list = new ArrayList<>();
+	private static final int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	private static final List<Integer> fixesSizeList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+	private static final List<String> list = new ArrayList<>();
 
 	static {
 		System.out.println("Execute first!");
 		System.out.println("----------------------------");
-		list.add("String 1");
-		list.add("String 2");
-		list.add("String 3");
-		list.add("String 4");
-		list.add("String 5");
-		list.add("String 6");
-		list.add("String 7");
-		list.add("String 8");
-		list.add("String 9");
-		list.add("String 10");
+		
+		for (int i = 0; i <= 10; i++) {
+			list.add("String " + i);
+		}
 	}
 
 	public static void main(String[] args) {
@@ -40,14 +34,14 @@ public class Array {
 		for (String i : cars) {
 			System.out.println(i);
 		}
-
+		
 	}
 
 	private static void printForeach(List<Integer> fixesSizeList) {
 		System.out.println("Method - printForeach");
 		System.out.println();
 		// foreach
-		for (int i : arr) {
+		for (int i : fixesSizeList) {
 			System.out.println("Number - " + i);
 		}
 		System.out.println("----------------------------------------");

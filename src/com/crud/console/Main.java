@@ -8,7 +8,7 @@ public class Main {
 
 		Scanner scanner = null;
 		boolean start = true;
-		String exit = "n";
+		String exit;
 
 		try {
 			scanner = new Scanner(System.in);
@@ -39,11 +39,7 @@ public class Main {
 			case 5:
 				System.out.println("Are you sure y/n ?");
 				exit = scanner.next();
-				if ("y".equals(exit)) {
-					start = false;
-				} else {
-					start = true;
-				}
+				start = !"y".equals(exit);
 				break;
 			default:
 				break;

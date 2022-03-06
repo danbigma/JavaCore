@@ -186,5 +186,5 @@ public class Function {
 		}
 		return scanner.next();
 	}
-	
+
 }

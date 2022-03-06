@@ -11,6 +11,7 @@ public class MainTest {
 		firstclass.publicMethod();
 
 		ClassTesting secondclass = new ClassTesting(argmA, argmB);
+		
 		System.out.println("Sum - " + secondclass.sum());
 		System.out.println("Subtract - " + secondclass.subtract());
 		System.out.println("Multiply - " + secondclass.multiply());
