@@ -7,13 +7,8 @@ import java.util.Iterator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
+
 
 public class ExcelReader {
 
@@ -112,7 +107,7 @@ public class ExcelReader {
 	}
 
 	private static void printCellValue(Cell cell) {
-		switch (cell.getCellTypeEnum()) {
+		switch (cell.getCellType()) {
 		case BOOLEAN:
 			System.out.print(cell.getBooleanCellValue());
 			break;

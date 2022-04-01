@@ -1,0 +1,75 @@
+2022-04-01 17:28:42.888 INFO [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+2022-04-01 17:34:59.932 INFO [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+[INFO ] 2022-04-01 17:36:33.807 [main] CreateFile - File already exists.
+[INFO ] 2022-04-01 17:37:31.804 [main] CreateFile - File already exists.
+[INFO ] 2022-04-01 17:38:36.533 [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+[INFO] 2022-04-01 17:40:51.243 [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+[INFO] 2022-04-01 17:45:05.343 [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+[INFO ] 2022-04-01 17:46:52.641 [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+[INFO] 2022-04-01 17:49:45.983 [main] [com.io.file.CreateFile.main(CreateFile.java:19)] - File already exists.
+[INFO] 2022-04-01 17:51:46.405 [main] [com.test.date.DateTest.print(DateTest.java:59)] - Before formatting: 2022-04-01T17:51:46.398
+[INFO] 2022-04-01 17:51:46.414 [main] [com.test.date.DateTest.print(DateTest.java:59)] - After formatting: 01-04-2022 17:51:46
+[INFO] 2022-04-01 17:51:46.414 [main] [com.test.date.DateTest.print(DateTest.java:59)] - ----------------------------------
+[INFO] 2022-04-01 17:51:46.418 [main] [com.test.date.DateTest.print(DateTest.java:59)] - Basic date format - Fri Apr 01 17:51:46 CEST 2022
+[INFO] 2022-04-01 17:51:46.418 [main] [com.test.date.DateTest.print(DateTest.java:59)] - ----------------------------------
+[INFO] 2022-04-01 17:51:46.418 [main] [com.test.date.DateTest.print(DateTest.java:59)] - dd.MM.yyyy - 01.04.2022
+[INFO] 2022-04-01 17:51:46.418 [main] [com.test.date.DateTest.print(DateTest.java:59)] - ----------------------------------
+[INFO] 2022-04-01 17:51:46.418 [main] [com.test.date.DateTest.print(DateTest.java:59)] - dd-MM-yyyy - 01-04-2022
+[INFO] 2022-04-01 17:51:46.418 [main] [com.test.date.DateTest.print(DateTest.java:59)] - ----------------------------------
+[INFO] 2022-04-01 17:51:46.419 [main] [com.test.date.DateTest.print(DateTest.java:59)] - dd/MM/yyyy - 01/04/2022
+[INFO] 2022-04-01 17:51:46.420 [main] [com.test.date.DateTest.print(DateTest.java:59)] - Fri Apr 01 00:00:00 CEST 2022
+[INFO] 2022-04-01 17:51:46.420 [main] [com.test.date.DateTest.print(DateTest.java:59)] - ----------------------------------
+[INFO] 2022-04-01 17:55:13.189 [main] [com.test.url.GetWebElement.main(GetWebElement.java:22)] - Start
+[INFO] 2022-04-01 17:55:19.412 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - html
+[INFO] 2022-04-01 17:55:19.419 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - head
+[INFO] 2022-04-01 17:55:19.423 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - meta
+[INFO] 2022-04-01 17:55:19.427 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - meta
+[INFO] 2022-04-01 17:55:19.432 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - link
+[INFO] 2022-04-01 17:55:19.437 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - link
+[INFO] 2022-04-01 17:55:19.441 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - title
+[INFO] 2022-04-01 17:55:19.449 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - style
+[INFO] 2022-04-01 17:55:19.454 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - body
+[INFO] 2022-04-01 17:55:19.458 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.463 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.470 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.474 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.478 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.483 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.488 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.492 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.495 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.500 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 17:55:19.504 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - h1
+[INFO] 2022-04-01 17:55:19.508 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - span
+[INFO] 2022-04-01 17:55:19.512 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - footer
+[INFO] 2022-04-01 17:55:19.519 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - p
+[INFO] 2022-04-01 17:55:19.523 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - span
+[INFO] 2022-04-01 17:55:19.527 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - script
+[INFO] 2022-04-01 17:55:25.410 [main] [com.test.url.GetWebElement.main(GetWebElement.java:48)] - end.
+[INFO] 2022-04-01 18:09:06.453 [main] [com.test.url.GetWebElement.main(GetWebElement.java:22)] - Start
+[INFO] 2022-04-01 18:09:14.354 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - html
+[INFO] 2022-04-01 18:09:14.357 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - head
+[INFO] 2022-04-01 18:09:14.366 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - meta
+[INFO] 2022-04-01 18:09:14.372 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - meta
+[INFO] 2022-04-01 18:09:14.376 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - link
+[INFO] 2022-04-01 18:09:14.382 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - link
+[INFO] 2022-04-01 18:09:14.386 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - title
+[INFO] 2022-04-01 18:09:14.389 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - style
+[INFO] 2022-04-01 18:09:14.396 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - body
+[INFO] 2022-04-01 18:09:14.400 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.403 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.411 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.418 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.423 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.432 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.436 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.442 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.450 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.454 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - div
+[INFO] 2022-04-01 18:09:14.461 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - h1
+[INFO] 2022-04-01 18:09:14.466 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - span
+[INFO] 2022-04-01 18:09:14.470 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - footer
+[INFO] 2022-04-01 18:09:14.475 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - p
+[INFO] 2022-04-01 18:09:14.483 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - span
+[INFO] 2022-04-01 18:09:14.487 [main] [com.test.url.GetWebElement.print(GetWebElement.java:52)] - script
+[INFO] 2022-04-01 18:09:20.277 [main] [com.test.url.GetWebElement.main(GetWebElement.java:48)] - end.

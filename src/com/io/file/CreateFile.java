@@ -1,19 +1,25 @@
 package com.io.file;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.File;
 import java.io.IOException;
 
 public class CreateFile {
+	private static final Logger logger = LogManager.getLogger(CreateFile.class);
 	public static void main(String[] args) {
+
 		try {
 			File myObj = new File("plainfile.txt");
 			if (myObj.createNewFile()) {
-				System.out.println("File created: " + myObj.getName());
+				String message = "File created: " + myObj.getName();
+				logger.info(message);
 			} else {
-				System.out.println("File already exists.");
+				logger.info("File already exists.");
 			}
 		} catch (IOException e) {
-			System.out.println("An error occurred.");
+			logger.error("An error occurred.");
 			e.printStackTrace();
 		}
 	}
