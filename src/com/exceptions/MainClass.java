@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 public class MainClass {
 
-	private static String DATABASE_EXCEPTION = "DATABASE_EXCEPTION";
+	private static final String DATABASE_EXCEPTION = "DATABASE_EXCEPTION";
 	private static final Logger logger = LogManager.getLogger(MainClass.class);
 
 	public static void main(String[] args) {
@@ -17,7 +17,8 @@ public class MainClass {
 			makeDatabaseConnection();
 		} catch (HandledException e) {
 			// Display custom message to the user
-			System.out.println("Code: " + e.getCode() + " Exception Message : " + e.getMessage());
+			String message = "Code: " + e.getCode() + " Exception Message : " + e.getMessage();
+			logger.error(message);
 			// Log the exception detail
 			logger.error("Exception: ", e);
 		}
@@ -27,9 +28,8 @@ public class MainClass {
 		String dbURL = "jdbc:sqlserver://localhost\\sqlexpress";
 		String userName = "sa";
 		String password = "secret";
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(dbURL, userName, password);
+		try (Connection conn = DriverManager.getConnection(dbURL, userName, password)) {
+			logger.info("Connection successfully");
 		} catch (SQLException e) {
 			throw new HandledException(DATABASE_EXCEPTION, "Failed to connect to database", e);
 		}
