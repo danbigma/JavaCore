@@ -15,7 +15,7 @@ public class Main {
 		// Set value for variable of object
 		person.setFirstname("Danylo");
 		person.setLastname("Bigma");
-		person.setAge(31);
+		person.setAge(32);
 		person.setSmoke(true);
 		person.setContacts(contacts);
 

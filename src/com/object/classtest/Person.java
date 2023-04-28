@@ -6,7 +6,7 @@ public class Person {
 	private String lastname;
 	private int age;
 	private boolean smoke = false;
-	private int idPerson;
+	private final int idPerson;
 	private Contacts contacts;
 	public String publicVariable;
 	private static int counter; // static field
