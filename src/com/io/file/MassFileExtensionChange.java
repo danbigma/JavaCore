@@ -12,7 +12,7 @@ public class MassFileExtensionChange {
         String directoryPath = "Ruta de la carpeta"; // Ruta de la carpeta "coches"
         String oldExtension = ".jfif"; // Extensión antigua de los archivos
         String newExtension = ".jpeg"; // Nueva extensión que deseas asignar
-        String newDirectoryPath = "Ruta de la carpeta"; // Ruta de la carpeta
+        String newDirectoryPath = "Ruta de la nueva carpeta"; // Ruta de la carpeta
 
         File directory = new File(directoryPath);
         File newDirectory = new File(newDirectoryPath);
