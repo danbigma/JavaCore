@@ -7,16 +7,21 @@ import java.nio.file.StandardCopyOption;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class MassFileExtensionChange {
+    private static final Logger logger = LogManager.getLogger(MassFileExtensionChange.class);
+
     public static void main(String[] args) {
-        String directoryPath = "Ruta de la carpeta"; // Ruta de la carpeta "coches"
-        String oldExtension = ".jfif"; // Extensión antigua de los archivos
-        String newExtension = ".jpeg"; // Nueva extensión que deseas asignar
-        String newDirectoryPath = "Ruta de la nueva carpeta"; // Ruta de la nueva carpeta
+        String directoryPath = "/Users/danbigma/Downloads/aud";
+        String oldExtension = ".jfif";
+        String newExtension = ".jpeg";
+        String newDirectoryPath = "/Users/danbigma/Downloads/aud-renamed";
 
         File directory = new File(directoryPath);
         File newDirectory = new File(newDirectoryPath);
-        newDirectory.mkdirs(); // Crea la nueva carpeta y sus subcarpetas si no existen
+        newDirectory.mkdirs();
 
         changeFileExtensionsInParallel(directory, newDirectory, oldExtension, newExtension);
     }
@@ -34,7 +39,7 @@ public class MassFileExtensionChange {
                 for (File file : files) {
                     if (file.isDirectory()) {
                         File newSubdirectory = new File(newDirectory, file.getName());
-                        newSubdirectory.mkdirs(); // Crea la subcarpeta en la nueva carpeta si no existe
+                        newSubdirectory.mkdirs();
                         processFiles(file, newSubdirectory, oldExtension, newExtension, executor);
                     } else {
                         String fileName = file.getName();
@@ -54,9 +59,9 @@ public class MassFileExtensionChange {
         File newFile = new File(newDirectory, newFileName);
 
         if (file.renameTo(newFile)) {
-            System.out.println("Archivo renombrado: " + file.getName() + " -> " + newFileName);
+            logger.info("Archivo renombrado: {} -> {}", file.getName(), newFileName);
         } else {
-            System.out.println("No se pudo renombrar el archivo: " + file.getName());
+            logger.warn("No se pudo renombrar el archivo: {}", file.getName());
         }
     }
 
@@ -65,9 +70,9 @@ public class MassFileExtensionChange {
 
         try {
             Files.copy(file.toPath(), newFile.toPath(), StandardCopyOption.COPY_ATTRIBUTES);
-            System.out.println("Archivo copiado: " + file.getName());
+            logger.info("Archivo copiado: {}", file.getName());
         } catch (IOException e) {
-            System.out.println("No se pudo copiar el archivo: " + file.getName());
+            logger.warn("No se pudo copiar el archivo: {}", file.getName());
         }
     }
 }

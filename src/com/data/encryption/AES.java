@@ -1,6 +1,5 @@
 package com.data.encryption;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -13,9 +12,8 @@ import javax.crypto.spec.SecretKeySpec;
 public class AES {
 
 	private static SecretKeySpec secretKey;
-	private static byte[] key;
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		final String secretKey = "ssshhhhhhhhhhh!!!!";
 
 		String originalString = "howtodoinjava.com";
@@ -30,7 +28,7 @@ public class AES {
 	public static void setKey(String myKey) {
 		MessageDigest sha = null;
 		try {
-			key = myKey.getBytes(StandardCharsets.UTF_8);
+            byte[] key = myKey.getBytes(StandardCharsets.UTF_8);
 			sha = MessageDigest.getInstance("SHA-1");
 			key = sha.digest(key);
 			key = Arrays.copyOf(key, 16);
