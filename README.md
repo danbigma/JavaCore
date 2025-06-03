@@ -16,7 +16,9 @@ The source code under `src/com/` is grouped in broad areas:
 - **connection** and **crud** – simple JDBC connectivity and CRUD operations.
 - **patterns** and **exceptions** – design pattern snippets and custom exception classes.
 - **laboratory** – assorted small OOP exercises and other experiments.
-- **generics** – small examples demonstrating Java generics.
+- **generics** – small examples demonstrating Java generics. These include a
+  simple `Box`, a two-parameter `Pair`, and a `BoundedBox` restricted to
+  `Number` types.
 - **network** – simple networking utilities using `java.net` APIs.
 
 ## Running examples
