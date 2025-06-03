@@ -35,7 +35,7 @@ public class StringTest {
 		int symbolsOnString = text.length();
 
 		System.out.println("Symbols on string - " + symbolsOnString);
-		System.out.println("Firt letter - " + text.charAt(0));
+                System.out.println("First letter - " + text.charAt(0));
 		System.out.println("Last letter - " + text.charAt(symbolsOnString - 1));
 
 		Random random = null;
