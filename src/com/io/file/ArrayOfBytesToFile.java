@@ -11,8 +11,8 @@ import java.nio.file.Paths;
 public class ArrayOfBytesToFile {
 	
 	private static final String UPLOAD_FOLDER = "data";
-	private static final String FILE_SEPARATOR = "file.separator";
-	private static final String USER_DIR = "file.separator";
+    private static final String FILE_SEPARATOR = "file.separator";
+    private static final String USER_DIR = "user.dir";
 
 	public static void main(String[] args) {
 		FileInputStream fileInputStream = null;
@@ -24,12 +24,15 @@ public class ArrayOfBytesToFile {
 			fileInputStream = new FileInputStream(file);
 			fileInputStream.read(bFile);
 			// save bytes[] into a file
-			writeBytesToFile(bFile,
-					System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER + "test1.txt");
-			writeBytesToFileClassic(bFile,
-					System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER + "test2.txt");
-			writeBytesToFileNio(bFile,
-					System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER + "test3.txt");
+                writeBytesToFile(bFile,
+                                System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER
+                                                + System.getProperty(FILE_SEPARATOR) + "test1.txt");
+                writeBytesToFileClassic(bFile,
+                                System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER
+                                                + System.getProperty(FILE_SEPARATOR) + "test2.txt");
+                writeBytesToFileNio(bFile,
+                                System.getProperty(USER_DIR) + System.getProperty(FILE_SEPARATOR) + UPLOAD_FOLDER
+                                                + System.getProperty(FILE_SEPARATOR) + "test3.txt");
 
 			System.out.println("Done");
 		} catch (IOException e) {

@@ -40,8 +40,8 @@ public enum Hash {
 			return sb.toString();
 
 		} catch (Exception e) {
-			System.out.println("Error calculado el Hash " + e.getMessage().toString());
-			e.getStackTrace();
+                        System.out.println("Error calculado el Hash " + e.getMessage().toString());
+                        e.printStackTrace();
 		}
 		return null;
 
@@ -52,13 +52,13 @@ public enum Hash {
 		try {
 			fis = new FileInputStream(new File("PATHtoFILE"));
 			System.out.println(Hash.MD5.checksum(new ByteArrayInputStream(IOUtils.toByteArray(fis))));
-		} catch (FileNotFoundException e) {
-			System.out.println("Error" + e.getMessage());
-			e.getStackTrace();
-		} catch (IOException e) {
-			System.out.println("Error" + e.getMessage());
-			e.getStackTrace();
-		}
+                } catch (FileNotFoundException e) {
+                        System.out.println("Error" + e.getMessage());
+                        e.printStackTrace();
+                } catch (IOException e) {
+                        System.out.println("Error" + e.getMessage());
+                        e.printStackTrace();
+                }
 	}
 
 }
